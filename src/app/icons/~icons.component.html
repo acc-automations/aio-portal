@@ -1,0 +1,209 @@
+<!-- ==============  Delivery performance Page     ============== -->
+<div class="main-content">
+    <div class="container-fluid">
+    <div class="row">
+    <div class="col-lg-3 col-md-3">
+    
+<br><br><br>
+    
+	<table width="auto" border="1" cellspacing="0" cellpadding="0" class="table table-bordered FinancialviewTable">	
+  <thead>
+    <tr>
+      <th width="" scope="col"><span>Deal Inforamtion</span></th>
+      <td width="" scope="col">&nbsp;</td>
+      </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row"><label>Master Client Name</label></th>
+      <td width="196" class="centerInforamtion"><strong>SOFTBANK-HIVE Program</strong></td>
+      </tr>
+    <tr>
+      <th scope="row"><label>Master Contract Name</label></th>
+      <td class="centerInforamtion">HIVE Program</td>
+      </tr>
+	      <tr>
+      <th scope="row"><label>Master Contract</label></th>
+      <td class="centerInforamtion">9940273893</td>
+      </tr>
+	      <tr>
+      <th scope="row"><label>Start Date</label></th>
+      <td class="centerInforamtion">30-Jun-18</td>
+      </tr>
+	      <tr>
+      <th scope="row"><label>End Date</label></th>
+      <td class="centerInforamtion">30-Jun-20</td>
+      </tr>
+	      <tr>
+      <th scope="row"><label>Currency</label></th>
+      <td class="centerInforamtion">USD</td>
+      </tr>
+	      <tr>
+      <th scope="row"><label>Location</label></th>
+      <td class="centerInforamtion">Mumbai</td>
+      </tr>
+	      <tr style="background:#eee;">
+	        <th scope="row"><span>FINANCIAL SUMMARY ('000)</span> 
+			 <select class="form-control" style=" background: none; padding-left:8px;">
+                                        <option value="">YTD</option>
+                                        <option value="">Forecast</option>
+                                        <option value="">Fiscal Year</option>
+                                        <option value="">CTD</option>
+                                        <option value="">EAC</option>
+                                        <option value="">January</option>
+                                        <option value="">February</option>
+                                        <option value="">March</option>
+                                        <option value="">April</option>
+                                        <option value="">May</option>
+                                        <option value="">June</option>
+                                        <option value="">July</option>
+                                        <option value="">August</option>
+                                        <option selected value="">September</option>
+                                        <option value="" >October</option>
+                                        <option value="">November</option>
+                                        <option value="">December</option>
+                                    </select>
+			  
+			  </th>
+	        <td>&nbsp;</td>
+	        </tr>
+	      <tr>
+      <th scope="row"><small>ACTUALS</small></th>
+      <td>&nbsp;</td>
+      </tr>
+	      <tr>
+      <th scope="row"  ><label>November 2018 Revenue</label></th>
+       
+      <td align="right">{{totalMmeRevenue}} </td>
+      </tr>
+	      <tr>
+      <th scope="row"><label>November 2018 Contract Cost</label></th>
+      <td align="right">{{totalMmeContractCost}} </td>
+      </tr>
+	      <tr>
+      <th scope="row"><label>November 2018 CCI</label></th>
+      <td align="right">{{totalMmeCci}} </td>
+      </tr>
+	      <tr>
+      <th scope="row"><label>November 2018 CCI%</label></th>
+      <td align="right">{{totalMmeCciPercent +'%'}}</td>
+      </tr>
+	      <tr>
+	        <th scope="row"><small>ODE</small></th>
+	        <td>&nbsp;</td>
+	        </tr>
+	      <tr>
+      <th scope="row"><label>November 2018 Revenue</label></th>
+      <td align="right">{{totalSapRevenue}}</td>
+      </tr>
+	      <tr>
+      <th scope="row"><label>November 2018 Contract Cost</label></th>
+      <td align="right">{{totalSapContractCost}} </td>
+      </tr>
+	      <tr>
+      <th scope="row"><label>November 2018 CCI</label></th>
+      <td align="right">{{totalSapCci}} </td>
+      </tr>
+	      <tr>
+      <th scope="row"><label>November 2018 CCI%</label></th>
+      <td align="right">{{totalSapCcipercent +'%'}}</td>
+      </tr>
+	      <tr>
+	        <th scope="row"><small>Variance</small></th>
+	        <td>&nbsp;</td>
+	        </tr>
+	      <tr>
+      <th scope="row"><label>Revenue</label></th>
+     <td align="right">{{totalVarienceRevenue}} </td>
+      </tr>
+	      <tr>
+      <th scope="row"><label>Contract Cost</label></th>
+      <td align="right">{{toalVarienceContractCost}} </td>
+      </tr>
+	      <tr>
+      <th scope="row"><label>CCI</label></th>
+    
+    <td align="right">{{totalVarienceCci}}</td>
+      </tr>
+	      <tr>
+      <th scope="row"><label>CCI%</label></th>
+      <td align="right">{{totalVarienceCciPercent +'%'}}</td>
+      </tr>
+	    <tr style="background:#eee;">
+	        <th scope="row"><span>CCI EXPANSION</span></th>
+	        <td>&nbsp;</td>
+	        </tr>
+	      <tr>
+      <th scope="row"><small>2018</small></th>
+      <td>&nbsp;</td>
+      </tr>
+	      <tr>
+	        <th scope="row"><label>Revenue</label></th>
+	        <td align="right">{{totalCCIExpRevenue}} </td>
+	        </tr>
+	      <tr>
+      <th scope="row"><label>Contract CCI</label></th>
+      <td align="right">{{totalCCIExpContractCci}} </td>
+      </tr>
+	      <tr>
+      <th scope="row"><label>Contract CCI%</label></th>
+      <td align="right">{{totalCCIExpContractCcipercent +'%'}}</td>
+      </tr>
+	      <tr>
+	        <th scope="row"><small>2019</small></th>
+	        <td>&nbsp;</td>
+	        </tr>
+	      <tr>
+      <th scope="row"><label>Target CCI %</label></th>
+      <td align="right">{{totalTargetCCIPercent +'%'}}</td>
+      </tr>
+	      <tr>
+      <th scope="row"><label>Contract CCI</label></th>
+      <td align="right">{{totalTargetContractCci}} </td>
+      </tr>
+	      <tr>
+	        <th scope="row"><small>ACTUALS</small></th>
+	        <td align="right">&nbsp;</td> 
+	        </tr>
+	      <tr>
+      <th scope="row"><label>Revenue</label></th>
+      <td align="right">{{totalFiscalRevenue}} </td>
+      </tr>
+	      <tr>
+      <th scope="row"><label>Contract CCI</label></th>
+      <td align="right">{{totalFiscalContractCci}} </td>
+      </tr>
+	<tr>
+      <th scope="row"><label>Contract CCI%</label></th>
+      <td align="right">{{totalFiscalContractCCipercent + '%'}}</td>
+      </tr>
+	  	<tr>
+	  	  <th scope="row"><small>Gap</small></th>
+	  	  <td>&nbsp;</td>
+	  	  </tr>
+	  	<tr>
+      <th scope="row"><label>Contract CCI</label></th>
+      <td align="right">{{totalGapContractCci}}</td>
+      </tr>
+	  	<tr>
+      <th scope="row"><label>Contract CCI%</label></th>
+      <td align="right">{{totalGapContractCciPercent}}</td>
+      </tr>
+	  	<tr>
+      <th scope="row">&nbsp;</th>
+      <td>&nbsp;</td>
+      </tr>
+         
+       
+	  
+  </tbody>
+</table>
+        
+</div>
+</div>
+</div>
+</div>
+    
+    
+    
+    

@@ -1,0 +1,457 @@
+[
+   {
+       
+        "Master Contract No_" : 65478.0,
+        "OM_ID" : "78657",
+        "Week" : null,
+        "Month" : "july",
+        "Year" : 2019.0,
+        "OG_*" : [ 
+            "Financial Services", 
+            "Health & Public Service", 
+            "Intelligent Shared Services", 
+            "Products", 
+            "Resources", 
+            "Software & Platform", 
+            "STDEM", 
+            "Other"
+        ],
+        "Contract Region" : [ 
+            "AAPAC", 
+            "ACN", 
+            "ACS", 
+            "China", 
+            "Europe", 
+            "India", 
+            "Japan", 
+            "LATAM"
+        ],
+        "Contract Type " : [ 
+            "Transactional", 
+            "Fixed", 
+            "FTE", 
+            "Cost Plus", 
+            "Managed Services", 
+            "Outcome Based", 
+            "Staff Augmentation", 
+            "Transaction Based", 
+            "Volume Based"
+        ],
+        "Capability " : [ 
+            "Accelerated RD for Pharmaceuticals", 
+            "Credit Services", 
+            "Customer Service", 
+            "Emerging  Cross Industry", 
+            "Emerging  Industry Specific", 
+            "Finance and Accounting", 
+            "Health Administration", 
+            "HR Services", 
+            "Human Resources", 
+            "Insurance", 
+            "Intelligent Shared Services (ISS)", 
+            "Marketing", 
+            "Marketing & Media Management", 
+            "Network Services BPO", 
+            "Sales and Customer Services", 
+            "Sales Operations", 
+            "SDTEM", 
+            "Sourcing and Procurement", 
+            "Supply Chain", 
+            "Talent Learning", 
+            "Utilities"
+        ],
+        "Entity " : [ 
+            "Communication, Media and Technology", 
+            "Digital Marketing", 
+            "Financial Services", 
+            "Health", 
+            "India Domestic Account", 
+            "Intelligent Shared Services", 
+            "Learning", 
+            "Pharma", 
+            "Products", 
+            "Resources", 
+            "Service Desk", 
+            "Shared Services (BSS)", 
+            "Software and Platform – Google", 
+            "Software and Platform – Others", 
+            "Supply Chain, Network and Procurement"
+        ],
+        "Tower " : 6.0,
+        "Reporting Area" : [ 
+            "SAT", 
+            "APTP", 
+            "Argentina", 
+            "Argentina-ACN", 
+            "ASG", 
+            "Bangalore", 
+            "Bangalore-ACN", 
+            "Brazil", 
+            "Brazil-ACN", 
+            "Canada", 
+            "Chennai", 
+            "China", 
+            "China-ACN", 
+            "Costa-Rica", 
+            "Danubia", 
+            "Danubia-ACN", 
+            "Delhi", 
+            "EU-Other", 
+            "Gallia - APTP", 
+            "Gallia - Non-APTP", 
+            "Hyderabad", 
+            "Iberia", 
+            "Iberia-ACN", 
+            "Italy", 
+            "Italy-ACN", 
+            "Japan", 
+            "Malaysia", 
+            "Mauritius", 
+            "Mumbai", 
+            "Mumbai-ACN", 
+            "Mumbai-ACS", 
+            "Philippines", 
+            "Philippines-ACN", 
+            "Poland", 
+            "SAT-ACN", 
+            "Singapore", 
+            "SouthAfrica", 
+            "SriLanka", 
+            "UKI-Norway", 
+            "UKI-Norway-ACN", 
+            "US – ACS", 
+            "US-Other", 
+            "US-Other-ACN"
+        ],
+        "Delivery Region" : [ 
+            "AAPAC", 
+            "ACN", 
+            "ACS", 
+            "China", 
+            "Europe", 
+            "India", 
+            "Japan", 
+            "LATAM"
+        ],
+        "BaseLine" : [ 
+            "yes", 
+            "No"
+        ],
+        "MWB ID" : 7865.0,
+        "Location" : "Mumbai",
+        "Building no_" : 4.0,
+        "Floor" : 6.0,
+        "Bay no_" : 3.0,
+        "Diamond Client" : [ 
+            "yes", 
+            "No"
+        ],
+        "Channels_WebContent" : null,
+        "Channels_CreativeContent" : null,
+        "Channels_EmailMarketing" : null,
+        "Channels_Analytics" : null,
+        "Channels_AdOps" : null,
+        "BE Focal " : "reshma.n.shetty",
+        "BE Lead" : "himanshu.jadon",
+        "Mobilization Lead" : "askurhy",
+        "AMT Lead" : "Sameer.sekhon",
+        "SDO Maturity Champion" : null,
+        "OG Lead " : "sonal.h.mehra",
+        "SDL" : "arnold.miranda",
+        "Cluster lead" : "sonal.h.mehra",
+        "MD Responsible" : "sonal.h.mehra",
+        "CFM" : "shilpa.s.kamble",
+        "OADM(BAL)" : "shilpa.s.kamble",
+        "CAL's" : "shilpa.s.kamble",
+        "Solution Architect id" : "shilpa.s.kamble",
+        "Solutioned HC" : 67.0,
+        "Digitalization release HC" : 234.0,
+        "Current HC" : "auto-populated",
+        "Tools used" : [ 
+            "SQF", 
+            "GPH", 
+            "ACF"
+        ],
+        "Attrition _Reason for Red" : "jdhfj",
+        "Attrition _Action plan to get into green" : "hdjfh",
+        "Monthly_Requests managed" : 5.0,
+        "Monthly_Appreciations" : 6.0,
+        "Monthly_Issues Raised " : 4.0,
+        "Initial Contract Date" : "10-2-2018",
+        "Intial Contract Duration" : "1 Year",
+        "contract extended?" : [ 
+            "yes", 
+            "No"
+        ],
+        "# of time contract extended" : 4.0,
+        "Description of the CR - Only Financial CR's" : "ufufrf",
+        "Has the CR raised" : [ 
+            "yes", 
+            "No"
+        ],
+        "Client Approved (signed)" : [ 
+            "yes", 
+            "No"
+        ],
+        "Additional CR HC" : 4.0,
+        "Revenue - Total CR Value" : 45.0,
+        "Revenue in <current year>" : 3.0,
+        "Q1 - <current year>" : null,
+        "Q2 - <current year>" : null,
+        "Q3 - <current year>" : null,
+        "Q4 - <current year>" : null,
+        "Included in FY18 Original Plan" : [ 
+            "yes", 
+            "No"
+        ],
+        "What value was included in the plan" : null,
+        "Included in QF Submission" : null,
+        "What value was included in the QF submission" : null,
+        "Cost already incurred" : null,
+        "Billed Value" : 2345.0,
+        "Comments on CRs" : "jhfhfjf",
+        "If the CR is not approved whats the Probability of getting it approved" : [ 
+            "High", 
+            "Medium", 
+            "Low"
+        ],
+        "CR Date" : "10-4-2012",
+        "ABC_Green SLA" : 12.0,
+        "ABC_Total SLA" : 45.0,
+        "ABC_Green KPI" : 67.0,
+        "ABC_Total KPI" : 45.0,
+        "ABC_Service Penalty (USD 000)" : null,
+        "ABC_No Of Escalations" : null,
+        "ABC_Reason for Escalation and action taken" : null,
+        "ABC_# of 1 on 1's Scheduled" : null,
+        "ABC_# of 1 on 1's Completed" : null,
+        "ABC_Client delighted" : [ 
+            "yes", 
+            "No"
+        ],
+        "ABC_Client referenceble" : [ 
+            "yes", 
+            "No"
+        ],
+        "ABC_Referencability level" : [ 
+            "Level 1 - Masked", 
+            "Level 2- Controlled/ Reference Calls", 
+            "Level 3- Public References"
+        ],
+        "ABC_Comments" : null,
+        "Pipeline_DealName" : null,
+        "Pipeline_LeadName" : null,
+        "Pipeline_Estimated HC" : null,
+        "Pipeline_Stage" : "1B / 2B /3B",
+        "Pipeline_Probability" : null,
+        "Pipeline_HC" : "12",
+        "Pipeline_Estimated_HC" : null,
+        "Organic_DealName" : null,
+        "Organic_Stage" : null,
+        "Organic_Probability" : [ 
+            "1B", 
+            "2B", 
+            "3B"
+        ],
+        "Organic_HC" : "15",
+        "Organic_Upsell_Revenue" : "0.200",
+        "Organic_Estimated_HC" : "300",
+        "Organic_Renewal" : "Current HC + Organic_HC",
+        "OM_stability" : [ 
+            "Stable", 
+            "Capable", 
+            "Optimized", 
+            "Not Stable", 
+            "Optimized Re-cert"
+        ],
+        "OM_nextMovement" : [ 
+            "Stable", 
+            "Capable", 
+            "Optimized", 
+            "Not Stable", 
+            "Optimized Re-cert"
+        ],
+        "OM_BE Focal Floor walk completed for Current month" : [ 
+            "yes", 
+            "No"
+        ],
+        "OM_BE Lead floor walk completed for Current month" : [ 
+            "yes", 
+            "No"
+        ],
+        "OM_SDL floor walk completed for current month" : [ 
+            "yes", 
+            "No"
+        ],
+        "OM_Action plan " : [ 
+            "yes", 
+            "No"
+        ],
+        "J2IO_Assessment completed for current month" : [ 
+            "yes", 
+            "No"
+        ],
+        "J2IO_Landing Target for FY19" : [ 
+            "Foundation", 
+            "Automated", 
+            "Smart", 
+            "Intelligent"
+        ],
+        "J2IO_Current IO Status " : [ 
+            "Foundation", 
+            "Automated", 
+            "Smart", 
+            "Intelligent"
+        ],
+        "J2IO_Action plans for stage movements" : "",
+        "BOI_Metric map completed?" : [ 
+            "yes", 
+            "No", 
+            "WIP", 
+            "NA"
+        ],
+        "BOI_BOI & SLA+ data being populated and shared with client" : [ 
+            "yes", 
+            "No", 
+            "WIP", 
+            "NA"
+        ],
+        "BOI_Basic insights/analysis conducted and shared with client?" : [ 
+            "yes", 
+            "No", 
+            "WIP", 
+            "NA"
+        ],
+        "DFI_Deployment plan agreed with SDL " : [ 
+            "yes", 
+            "No", 
+            "WIP", 
+            "NA"
+        ],
+        "DFI_Views signed off" : [ 
+            "yes", 
+            "No", 
+            "WIP", 
+            "NA"
+        ],
+        "DigitalFloorDevelopment completed" : [ 
+            "yes", 
+            "No", 
+            "WIP", 
+            "NA"
+        ],
+        "DFI_Detailed FMEA as per ABC Framework available?" : [ 
+            "yes", 
+            "No", 
+            "WIP", 
+            "NA"
+        ],
+        "DFI_Prirotized additional e2e alerts basis FMEA, SLA, SLA+ & BOI?" : [ 
+            "yes", 
+            "No", 
+            "WIP", 
+            "NA"
+        ],
+        "DFI_Linkage done on GCC" : [ 
+            "yes", 
+            "No", 
+            "WIP", 
+            "NA"
+        ],
+        "We_No_ of Ideas Submitted" : 44.0,
+        "We_IPP (1_5)" : 6.29,
+        "We_Implementation Rate (30%) (Rolling 6 Months)" : 118.0,
+        "We_Ontime Implementation (80%)" : 100.0,
+        "We_OntimeValidation  (85%)" : 100.0,
+        "We_Ideas to be red flagged in next 7 days" : 0.0,
+        "We_Ideas to be red flagged in next 30 days" : 0.0,
+        "CTS_TARGET" : 0.0,
+        "CTS_ACTUAL (A)" : 0.0,
+        "CTS_CARRY FORWAD (CF)" : 0.0,
+        "CTS_FY SAVING (A+CF)" : 0.0,
+        "CTS_PROJECTIONS" : 0.0,
+        "CTS_TOTAL SAVINGS" : 0.0,
+        "CTS_GAP TO TARGET" : 0.0,
+        "CVC_Value identified" : 0.0,
+        "TCV_Total Contract Value" : 0.0,
+        "Annual Revenue" : 0.0,
+        "CCI_Solutioned CCI %" : 45.0,
+        "CCI_Target (ODE CCI%)" : 35.0,
+        "CCI_Actuals" : 33.0,
+        "Digi_FY19 Target" : null,
+        "Digi_FY19 Actual (Automation + CU Stage 3+4)" : null,
+        "Digi_Gap [Target - (Actual + Projections)]" : null,
+        "Digi_Stage (0/1/2)" : null,
+        "Digi_Stage ( 3/4) Automation" : null,
+        "Digi_Stage (3/4) CU" : null,
+        "Digi_Automation releases last 3 Fys" : null,
+        "Digi_CU Releases last 3 Fys" : null,
+        "Digi_Entitlement Study completed (FTEs)" : null,
+        "Digi_Additional Information" : null,
+        "Agile_Actuals" : "15",
+        "Agile_Pipelines" : "23",
+        "MME_ACTUAL REVENUE " : null,
+        "MME_EAC" : null,
+        "MME_ACTUAL COST " : null,
+        "MME_ACTUAL CCI" : null,
+        "MME_ACTUAL CCI%" : null,
+        "MME_ODE REVENUE " : null,
+        "MME_ODE COST " : null,
+        "MME_ODE CCI" : null,
+        "MME_ODE CCI %" : null,
+        "MME_ACTUAL VS ODE REVENUE" : null,
+        "MME_ACTUAL VS ODE COST" : null,
+        "MME_ACTUAL VS ODE CCI" : null,
+        "MME_ACTUAL VS ODE CCI %" : null,
+        "MME_Comments for Negative" : null,
+        "SolnContigency_UsedForRiskAmt" : null,
+        "SolnContigency_WriteUpCIAmt" : null,
+        "SolnContigency_Total " : null,
+        "DP_C-Sat " : [ 
+            "Green", 
+            "Amber", 
+            "Red"
+        ],
+        "DP_Contractual SLA " : [ 
+            "Green", 
+            "Amber", 
+            "Red"
+        ],
+        "DP_Internal SLA " : [ 
+            "Green", 
+            "Amber", 
+            "Red"
+        ],
+        "DP_Finance" : [ 
+            "Green", 
+            "Amber", 
+            "Red"
+        ],
+        "DP_People " : [ 
+            "Green", 
+            "Amber", 
+            "Red"
+        ],
+        "DP_Volume / Backlog " : [ 
+            "Green", 
+            "Amber", 
+            "Red"
+        ],
+        "DP_Delivery Content " : [ 
+            "Green", 
+            "Amber", 
+            "Red"
+        ],
+        "DP_Delivery Campaign" : [ 
+            "Green", 
+            "Amber", 
+            "Red"
+        ],
+        "DP_Delivery Other" : [ 
+            "Green", 
+            "Amber", 
+            "Red"
+        ]
+}
+   
+]

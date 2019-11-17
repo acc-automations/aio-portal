@@ -1,0 +1,681 @@
+<!--==============  Employee confirguration Page     ============== -->
+<div class="main-content">
+	<div class="container-fluid">
+		<div class="row">
+		   <div class="col-md-12">
+				<div class="card">
+					
+						<div class="card-header card-header-danger customIconBg">
+						<div class="dealPerfrom">
+						<h3 class="card-title EmpHeadColor" >Employee confirguration </h3></div>
+							<div class="user-area dropdown float-right">			
+				<input type="file" class="custom-file-input" id="customFileLang" style="display: none;">
+			   <label class="btn btn-success" for="customFileLang">Bulk Upload</label>				
+			  </div>
+					   </div>
+  
+  <div class="card-body custopfrom">
+   <div class="row">
+  <div class="col-md-3"><mat-form-field class="example-full-width"><input matInput placeholder="Master Contract No."></mat-form-field></div>
+  <div class="col-md-3"><mat-form-field class="example-full-width"><input matInput placeholder="Sub Contract no"></mat-form-field></div>
+  <div class="col-md-3"><mat-form-field class="example-full-width"><input matInput placeholder="Deal Name"></mat-form-field></div>
+  <div class="col-md-3"><mat-form-field class="example-full-width"><input matInput placeholder="Choose a date"></mat-form-field></div>
+  </div>
+  <div class="row">
+  <div class="col-md-3"><mat-form-field class="example-full-width"><input matInput placeholder="SAP / Contract ID"></mat-form-field></div>
+  <div class="col-md-3"><mat-form-field class="example-full-width"><input matInput placeholder="First Name"></mat-form-field></div>
+  <div class="col-md-3"><mat-form-field class="example-full-width"><input matInput placeholder="Last Name"></mat-form-field></div>
+  <div class="col-md-3"><mat-form-field class="example-full-width">
+  <mat-select placeholder="Gender">
+		   <mat-option value="">Male</mat-option>
+		   <mat-option value="">Female</mat-option>
+		   <mat-option value="">Other</mat-option>
+	  </mat-select>	</mat-form-field>
+	  </div>		
+  </div>
+   <div class="row">
+  <div class="col-md-3"><mat-form-field class="example-full-width"><input matInput placeholder="Enterprise ID"></mat-form-field></div>
+  <div class="col-md-3">
+	  <mat-form-field class="example-full-width">
+  <mat-select placeholder="Supervisor id">
+		   <mat-option value="">fetch it from active directory</mat-option>
+		   <mat-option value="">else manually add the email id</mat-option>
+	  </mat-select>	</mat-form-field> 
+	   </div>
+  <div class="col-md-3">
+  <mat-form-field class="example-full-width">
+  <mat-select placeholder="Role - Primary Skills">		
+   <mat-option value="">Customer Support</mat-option>
+   <mat-option value="">Web Design</mat-option>
+   <mat-option value="">User Interface</mat-option>
+   <mat-option value="">Digital Marketing</mat-option>
+   <mat-option value="">Transaction Processing</mat-option>
+   <mat-option value="">Search Engine Optimization</mat-option>
+   <mat-option value="">Graphic</mat-option>
+   <mat-option value="">Marketing - Others</mat-option>
+   <mat-option value="">Lang Prem</mat-option>
+  
+	  </mat-select>	</mat-form-field>	 
+	   </div>
+  <div class="col-md-3"><mat-form-field class="example-full-width">
+  <mat-select placeholder="Resource type">
+   <mat-option value="">FTE</mat-option>
+   <mat-option value="">Contractor</mat-option>
+	  </mat-select>	</mat-form-field></div>			
+  </div>					  
+  <div class="row">
+  <div class="col-md-3"><mat-form-field class="example-full-width"><input matInput placeholder="WO"></mat-form-field></div>
+  <div class="col-md-3"><mat-form-field class="example-full-width"><input matInput placeholder="Level"></mat-form-field></div>
+  <div class="col-md-3"><mat-form-field class="example-full-width"><input matInput placeholder="Sub level"></mat-form-field></div>
+  <div class="col-md-3"><mat-form-field class="example-full-width"><input matInput placeholder="Sublevel Effective date "></mat-form-field></div>			
+  </div>					  
+  <div class="row">
+  <div class="col-md-3"><mat-form-field class="example-full-width"><input matInput placeholder="ACC-DOJ"></mat-form-field></div>			
+  <div class="col-md-3">
+  <mat-form-field class="example-full-width">
+  <mat-select placeholder="Employee Status">
+  <mat-option value="">Active</mat-option>
+  <mat-option value="">Inactive - Redeployed</mat-option>
+  <mat-option value="">Inactive - Resigned</mat-option>
+  <mat-option value="">Active - Redep</mat-option>
+  <mat-option value="">Inactive - Resigned / To be backfilled</mat-option>
+	  </mat-select>	</mat-form-field></div>
+  <div class="col-md-3">
+  <mat-form-field class="example-full-width">
+  <mat-select placeholder="Attrition">
+  <mat-option value="">Managed </mat-option>
+  <mat-option value="">Unmanaged</mat-option>
+  <mat-option value="">HIPO</mat-option>
+  </mat-select>	
+  </mat-form-field></div>			
+  <div class="col-md-3"><mat-form-field class="example-full-width"><input matInput placeholder="Project Roll on Date"></mat-form-field></div>
+  </div>	
+  <div class="row">
+  <div class="col-md-3"><mat-form-field class="example-full-width"><input matInput placeholder="Project Roll Off Date "></mat-form-field></div>			
+  <div class="col-md-3"><mat-form-field class="example-full-width"><input matInput placeholder="Seat Allocated"></mat-form-field></div>
+  <div class="col-md-3"><mat-form-field class="example-full-width">
+  <mat-select placeholder="Workstation ">
+  <mat-option value="">Desktop</mat-option>
+  <mat-option value="">Laptop</mat-option>
+  </mat-select>	
+  </mat-form-field>
+  </div>			
+  <div class="col-md-3"><mat-form-field>
+	<mat-label>Asset</mat-label>
+	<mat-select [formControl]="toppings" multiple>
+	  <mat-option *ngFor="let topping of toppingList" [value]="topping">{{topping}}</mat-option>
+	</mat-select>
+  </mat-form-field></div> 
+  </div>	 
+  <div class="row">
+  <div class="col-md-3"><mat-form-field class="example-full-width"><input matInput placeholder="Critical Resource"></mat-form-field></div>			
+  <div class="col-md-3"><mat-form-field class="example-full-width"><input matInput placeholder="Floor Warden"></mat-form-field></div>
+  <div class="col-md-3"><mat-form-field class="example-full-width">
+  <mat-select placeholder="Cost Lever ">
+  <mat-option value="">Payroll - Other</mat-option>
+  <mat-option value="">Payroll - Automation</mat-option>
+  <mat-option value="">Payroll - Pyramid</mat-option>
+  <mat-option value="">DNP - Shift Utilization</mat-option>
+  <mat-option value="">Payroll - Productivity</mat-option>
+  </mat-select>	
+  </mat-form-field>
+	  </div>			
+  <div class="col-md-3"><mat-form-field class="example-full-width">
+  <mat-select placeholder="Project / Initiative Name ">
+  <mat-option value="">FTE Reduction</mat-option>
+  <mat-option value="">Delayed Promotion</mat-option>
+  <mat-option value="">Accelerate Automation</mat-option>
+  <mat-option value="">Pyramid Slendering</mat-option>
+  <mat-option value="">Seat release</mat-option>
+  <mat-option value="">Payroll Pyramid</mat-option>
+  <mat-option value="">Payroll - Structured Actions - Accelerate Automation</mat-option>
+  <mat-option value="">Seat Sharing</mat-option>
+  <mat-option value="">Efficiency</mat-option>
+  <mat-option value="">Loaned Resources</mat-option>
+  <mat-option value="">Payroll - Productivity</mat-option>
+  <mat-option value="">Delayed Hiring</mat-option>
+  </mat-select>	
+  </mat-form-field></div>
+  </div>	
+  <div class="row">
+  <div class="col-md-3"><mat-form-field class="example-full-width">
+  <mat-select placeholder="MBO">
+  <mat-option value="">FTE reduction</mat-option>
+  <mat-option value="">Delayed Promotion</mat-option>
+  <mat-option value="">Accelerate Automation</mat-option>
+  <mat-option value="">Pyramid Slendering</mat-option>
+  <mat-option value="">Seat Release</mat-option>
+  <mat-option value="">Payroll - Automation</mat-option>
+  <mat-option value="">Seat Sharing</mat-option>
+  <mat-option value="">Efficiency</mat-option>
+  <mat-option value="">Loaned Resources</mat-option>
+  <mat-option value="">Payroll - Productivity</mat-option>
+  <mat-option value="">Delayed Hiring</mat-option>
+  </mat-select>	
+  </mat-form-field></div>
+  
+  </div>	
+	  
+	  
+				  
+  <div class="row"><div class="col-md-3"><button class="mat-raised-button mat-button-base mat-primary" mat-button style=" margin-top: 15px; padding: 2px 15px; color: #000; background-color:#ffd060;"><i class="material-icons">touch_app</i> Save </button></div></div> 
+  </div>
+					
+					
+   <div class="card" style="max-width:1084px; padding: 10px; border: 5px solid #f2f2f2;">
+  
+	  <h2 class="h3">Popup </h2><br>
+  
+					
+  <div class="row">
+  <div class="col-md-3"><mat-form-field class="example-full-width">
+  <mat-select placeholder="CTS_Type">
+  <mat-option value="">Projection</mat-option>
+  <mat-option value="">Actuals</mat-option>
+  </mat-select>	
+  </mat-form-field></div>
+  <div class="col-md-3"><mat-form-field class="example-full-width"><input matInput placeholder="Digi ID"></mat-form-field></div>			
+  <div class="col-md-3"><mat-form-field class="example-full-width"><input matInput placeholder="Redeployed Deal name"></mat-form-field></div>
+  <div class="col-md-3"><mat-form-field class="example-full-width"><input matInput placeholder="Pyramid - To level"></mat-form-field></div>
+  </div>	
+	   
+  <div class="row">
+  <div class="col-md-3"><mat-form-field class="example-full-width"><input matInput placeholder="RMG - First Notification Mail"></mat-form-field></div>
+  <div class="col-md-3"><mat-form-field class="example-full-width"><input matInput placeholder="Benefit Start Date"></mat-form-field></div>			
+  <div class="col-md-3"><mat-form-field class="example-full-width"><input matInput placeholder="Benefit End Date"></mat-form-field></div>
+  <div class="col-md-3"><mat-form-field class="example-full-width"><input matInput placeholder="RMG aknowledgement - Email Attached"></mat-form-field></div>
+  </div>		
+	  
+  <div class="row">		
+  <div class="col-md-3"><mat-form-field class="example-full-width"><input matInput placeholder="Cert_Capability"></mat-form-field></div>
+  <div class="col-md-3"><mat-form-field class="example-full-width"><input matInput placeholder="Cert_Channel"></mat-form-field></div>
+  <div class="col-md-3"><mat-form-field class="example-full-width"><input matInput placeholder="Cert_From"></mat-form-field></div>
+  <div class="col-md-3"><mat-form-field class="example-full-width"><input matInput placeholder="Cert_To"></mat-form-field></div>	
+  </div>		
+	  
+	  
+  <div class="row">		
+  <div class="col-md-3"><mat-form-field class="example-full-width"><input matInput placeholder="Cert_Accreditation body"></mat-form-field></div>
+  </div>	
+		   
+				  
+  <div class="row">
+	  <div class="col-md-3"><button class="mat-raised-button mat-button-base mat-primary" mat-button style=" margin-top: 15px; padding: 2px 15px; color: #000; background-color:#ffd060;"><i class="material-icons">touch_app</i> Save </button></div></div> 
+					</div>			  
+					
+					
+			  
+	  <!-- ======================== Table View  =========================== -->
+  
+  <table class="table table-striped w-auto" border="0" cellspacing="0" cellpadding="3">
+	  <thead>
+		  <tr>
+			  <th><strong>EMP ID</strong></th>
+			  <th><strong>First Name</strong></th>
+			  <th><strong>Last Name</strong></th>
+			  <th><strong>Email ID</strong></th>
+			  <th><strong>Edit</strong></th>
+		  </tr>
+	  </thead>
+  
+  
+	  <tbody>
+		  <tr class="table-info">
+			  <th scope="row">12346645</th>
+			  <td>Kate</td>
+			  <td>Moss</td>
+			  <td>USA</td>
+			  <td><button class="btn" ng-click="edit(item)">Edit</button></td>
+		  </tr>
+		  <tr>
+			 <th scope="row">12345677</th>
+			  <td>Anna</td>
+			  <td>Wintour</td>
+			  <td>United Kingdom</td>
+			  <td><button class="btn" ng-click="edit(item)">Edit</button></td>
+		  </tr>
+		  <tr class="table-info">
+			  <th scope="row">22345645</th>
+			  <td>Tom</td>
+			  <td>Bond</td>
+			  <td>Spain</td>
+			  <td><button class="btn" ng-click="edit(item)">Edit</button></td>
+		  </tr>
+		  <tr>
+			 <th scope="row">12345595</th>
+			  <td>Jerry</td>
+			  <td>Horwitz</td>
+			  <td>Italy</td>
+			  <td><button class="btn" ng-click="edit(item)">Edit</button></td>
+		  </tr>
+		  <tr class="table-info">
+			  <th scope="row">18845645</th>
+			  <td>Janis</td>
+			  <td>Joplin</td>
+			  <td>Poland</td>
+			  <td><button class="btn" ng-click="edit(item)">Edit</button></td>
+		  </tr>
+		  <tr>
+			  <th scope="row">12345985</th>
+			  <td>Gary</td>
+			  <td>Winogrand</td>
+			  <td>Germany</td>
+			  <td><button class="btn" ng-click="edit(item)">Edit</button></td>
+		  </tr>
+		  <tr class="table-info">
+			  <th scope="row">12365645</th>
+			  <td>Angie</td>
+			  <td>Smith</td>
+			  <td>USA</td>        
+			  <td><button class="btn" ng-click="edit(item)">Edit</button></td>
+		  </tr>
+		  <tr>
+			 <th scope="row">12345645</th>
+			  <td>John</td>
+			  <td>Mattis</td>
+			  <td>France</td>
+			  <td><button class="btn" ng-click="edit(item)">Edit</button></td>
+		  </tr>
+		  <tr class="table-info">
+			 <th scope="row">12665645</th>
+			  <td>Otto</td>
+			  <td>Morris</td>
+			  <td>Germany</td>
+			  <td><button class="btn" ng-click="edit(item)">Edit</button></td>
+		  </tr>
+	  </tbody>
+  </table>
+		<div class="card" style=" padding:0;"></div>
+  
+		  <!-- ======================== Table View  =========================== -->		 
+			   </div>		 
+			</div>          
+		</div>
+	</div>
+  </div>
+  
+  
+  <!--==============  Delivery performance Page     ============== -->
+  <div class="main-content">
+	<div class="container-fluid">
+		<div class="row">
+		   <div class="col-md-12">
+			   <div class="card">
+			   <div class="card-header card-header-danger customIconBg">
+						<div class="dealPerfrom">
+						<h3 class="card-title EmpHeadColor">Delivery performance </h3></div>
+							<div class="user-area dropdown float-right"></div>
+					   </div>
+			  <div class="card-body custopfrom"> 
+			   <div class="row">
+  
+				  <div class="table-responsive">
+  
+  <table width="100%" border="1" cellspacing="0" cellpadding="0" class="table CustomTable">
+		<!--Table head-->
+		<thead>
+		  <tr>
+			<th class="th-lg">Client</th>
+			<th class="th-lg">Client Sat</th>
+			<th class="th-lg">Finances</th>
+			<th class="th-lg">Delivery content</th>
+			<th class="th-lg">Delivery campaign</th>
+			<th class="th-lg">Delivery other</th>
+			<th class="th-lg">People</th>			
+			<th class="th-lg">Contractual SLA</th>
+			<th class="th-lg">Internal SLA</th>			
+		  </tr>
+		</thead>
+		<!--Table head-->
+  
+		<!--Table body-->
+		 <tbody>
+			<tr>
+			  <td class="campaign" align="center"><img _ngcontent-rdv-c2="" alt="" src="../../../assets/img/logo.jpg" title="Sprint" height="25px"></td>
+			  <td align="center" valign="middle"> <div class="dotContenaier"><span class="greenDdot"></span></div></td>
+			  <td align="center" valign="middle"> <div class="dotContenaier"><span class="greenDdot"></span></div></td>
+			  <td align="center" valign="middle"> <div class="dotContenaier"><span class="greenDdot"></span></div></td>
+			  <td align="center" valign="middle"> <div class="dotContenaier"><span class="greenDdot"></span></div></td>
+			  <td align="center" valign="middle"> <div class="dotContenaier"><span class="greenDdot"></span></div></td>
+			  <td align="center" valign="middle"> <div class="dotContenaier"><span class="redDdot"></span></div></td>
+			  <td align="center" valign="middle"> <div class="dotContenaier"><span class="greenDdot"></span></div></td>
+			  <td align="center" valign="middle"> <div class="dotContenaier"><span class="redDdot"></span></div></td>			
+		  </tr>
+		  <tr>
+			  <th class="campaign" align="center"><img _ngcontent-rdv-c2="" alt="" src="../../../assets/img/bmw.jpg" title="BMW" height="25px"></th>
+			  <th align="center" valign="middle"> <div class="dotContenaier"><span class="greenDdot"></span></div></th>
+			  <th align="center" valign="middle"> <div class="dotContenaier"><span class="greenDdot"></span></div></th>
+			  <th align="center" valign="middle"> <div class="dotContenaier"><span class="greenDdot"></span></div></th>
+			  <th align="center" valign="middle"> <div class="dotContenaier"><span class="greenDdot"></span></div></th>
+			  <th align="center" valign="middle"> <div class="dotContenaier"><span class="greenDdot"></span></div></th>
+			  <th align="center" valign="middle"> <div class="dotContenaier"><span class="redDdot"></span></div></th>
+			  <th align="center" valign="middle"> <div class="dotContenaier"><span class="greenDdot"></span></div></th>
+			  <th align="center" valign="middle"> <div class="dotContenaier"><span class="redDdot"></span></div></th>			
+		  </tr>
+		  <tr>
+			  <td class="campaign" align="center"><img _ngcontent-rdv-c2="" alt="" src="../../../assets/img/download.png" title="Canon"  height="25px"></td>
+			  <td align="center" valign="middle"> <div class="dotContenaier"><span class="greenDdot"></span></div></td>
+			  <td align="center" valign="middle"> <div class="dotContenaier"><span class="greenDdot"></span></div></td>
+			  <td align="center" valign="middle"> <div class="dotContenaier"><span class="greenDdot"></span></div></td>
+			  <td align="center" valign="middle"> <div class="dotContenaier"><span class="greenDdot"></span></div></td>
+			  <td align="center" valign="middle"> <div class="dotContenaier"><span class="greenDdot"></span></div></td>
+			  <td align="center" valign="middle"> <div class="dotContenaier"><span class="redDdot"></span></div></td>
+			  <td align="center" valign="middle"> <div class="dotContenaier"><span class="greenDdot"></span></div></td>
+			  <td align="center" valign="middle"> <div class="dotContenaier"><span class="redDdot"></span></div></td>			
+		  </tr>
+		  <tr>
+			  <th class="campaign" align="center"><img _ngcontent-rdv-c2="" alt="" src="../../../assets/img/ebay.png" title="ebay"  height="25px"></th>
+			  <th align="center" valign="middle"> <div class="dotContenaier"><span class="greenDdot"></span></div></th>
+			  <th align="center" valign="middle"> <div class="dotContenaier"><span class="greenDdot"></span></div></th>
+			  <th align="center" valign="middle"> <div class="dotContenaier"><span class="greenDdot"></span></div></th>
+			  <th align="center" valign="middle"> <div class="dotContenaier"><span class="greenDdot"></span></div></th>
+			  <th align="center" valign="middle"> <div class="dotContenaier"><span class="greenDdot"></span></div></th>
+			  <th align="center" valign="middle"> <div class="dotContenaier"><span class="redDdot"></span></div></th>
+			  <th align="center" valign="middle"> <div class="dotContenaier"><span class="greenDdot"></span></div></th>
+			  <th align="center" valign="middle"> <div class="dotContenaier"><span class="redDdot"></span></div></th>			
+		  </tr>		   
+		  <tr>
+			  <td class="campaign" align="center"><img _ngcontent-rdv-c2="" alt="" src="../../../assets/img/microsoft.jpg" title="Microsoft" height="25px"></td>
+			  <td align="center" valign="middle"> <div class="dotContenaier"><span class="greenDdot"></span></div></td>
+			  <td align="center" valign="middle"> <div class="dotContenaier"><span class="greenDdot"></span></div></td>
+			  <td align="center" valign="middle"> <div class="dotContenaier"><span class="greenDdot"></span></div></td>
+			  <td align="center" valign="middle"> <div class="dotContenaier"><span class="greenDdot"></span></div></td>
+			  <td align="center" valign="middle"> <div class="dotContenaier"><span class="greenDdot"></span></div></td>
+			  <td align="center" valign="middle"> <div class="dotContenaier"><span class="redDdot"></span></div></td>
+			  <td align="center" valign="middle"> <div class="dotContenaier"><span class="greenDdot"></span></div></td>
+			  <td align="center" valign="middle"> <div class="dotContenaier"><span class="redDdot"></span></div></td>			
+		  </tr>
+		  <tr>
+			  <th class="campaign" align="center"><img _ngcontent-rdv-c2="" alt="" src="../../../assets/img/P&G_logo.png" title="Procter & Gamble" height="25px"></th>
+			  <th align="center" valign="middle"> <div class="dotContenaier"><span class="greenDdot"></span></div></th>
+			  <th align="center" valign="middle"> <div class="dotContenaier"><span class="greenDdot"></span></div></th>
+			  <th align="center" valign="middle"> <div class="dotContenaier"><span class="greenDdot"></span></div></th>
+			  <th align="center" valign="middle"> <div class="dotContenaier"><span class="greenDdot"></span></div></th>
+			  <th align="center" valign="middle"> <div class="dotContenaier"><span class="greenDdot"></span></div></th>
+			  <th align="center" valign="middle"> <div class="dotContenaier"><span class="redDdot"></span></div></th>
+			  <th align="center" valign="middle"> <div class="dotContenaier"><span class="greenDdot"></span></div></th>
+			  <th align="center" valign="middle"> <div class="dotContenaier"><span class="redDdot"></span></div></th>			
+		  </tr>	
+			 
+					<tr>
+			  <td class="campaign" align="center"><img _ngcontent-rdv-c2="" alt="" src="../../../assets/img/logo.jpg" title="Sprint" height="25px"></td>
+			  <td align="center" valign="middle"> <div class="dotContenaier"><span class="greenDdot"></span></div></td>
+			  <td align="center" valign="middle"> <div class="dotContenaier"><span class="greenDdot"></span></div></td>
+			  <td align="center" valign="middle"> <div class="dotContenaier"><span class="greenDdot"></span></div></td>
+			  <td align="center" valign="middle"> <div class="dotContenaier"><span class="greenDdot"></span></div></td>
+			  <td align="center" valign="middle"> <div class="dotContenaier"><span class="greenDdot"></span></div></td>
+			  <td align="center" valign="middle"> <div class="dotContenaier"><span class="redDdot"></span></div></td>
+			  <td align="center" valign="middle"> <div class="dotContenaier"><span class="greenDdot"></span></div></td>
+			  <td align="center" valign="middle"> <div class="dotContenaier"><span class="redDdot"></span></div></td>			
+		  </tr>
+		  <tr>
+			  <th class="campaign" align="center"><img _ngcontent-rdv-c2="" alt="" src="../../../assets/img/bmw.jpg" title="BMW" height="25px"></th>
+			  <th align="center" valign="middle"> <div class="dotContenaier"><span class="greenDdot"></span></div></th>
+			  <th align="center" valign="middle"> <div class="dotContenaier"><span class="greenDdot"></span></div></th>
+			  <th align="center" valign="middle"> <div class="dotContenaier"><span class="greenDdot"></span></div></th>
+			  <th align="center" valign="middle"> <div class="dotContenaier"><span class="greenDdot"></span></div></th>
+			  <th align="center" valign="middle"> <div class="dotContenaier"><span class="greenDdot"></span></div></th>
+			  <th align="center" valign="middle"> <div class="dotContenaier"><span class="redDdot"></span></div></th>
+			  <th align="center" valign="middle"> <div class="dotContenaier"><span class="greenDdot"></span></div></th>
+			  <th align="center" valign="middle"> <div class="dotContenaier"><span class="redDdot"></span></div></th>			
+		  </tr>
+		  <tr>
+			  <td class="campaign" align="center"><img _ngcontent-rdv-c2="" alt="" src="../../../assets/img/download.png" title="Canon"  height="25px"></td>
+			  <td align="center" valign="middle"> <div class="dotContenaier"><span class="greenDdot"></span></div></td>
+			  <td align="center" valign="middle"> <div class="dotContenaier"><span class="greenDdot"></span></div></td>
+			  <td align="center" valign="middle"> <div class="dotContenaier"><span class="greenDdot"></span></div></td>
+			  <td align="center" valign="middle"> <div class="dotContenaier"><span class="greenDdot"></span></div></td>
+			  <td align="center" valign="middle"> <div class="dotContenaier"><span class="greenDdot"></span></div></td>
+			  <td align="center" valign="middle"> <div class="dotContenaier"><span class="redDdot"></span></div></td>
+			  <td align="center" valign="middle"> <div class="dotContenaier"><span class="greenDdot"></span></div></td>
+			  <td align="center" valign="middle"> <div class="dotContenaier"><span class="redDdot"></span></div></td>			
+		  </tr>
+		  <tr>
+			  <th class="campaign" align="center"><img _ngcontent-rdv-c2="" alt="" src="../../../assets/img/ebay.png" title="ebay"  height="25px"></th>
+			  <th align="center" valign="middle"> <div class="dotContenaier"><span class="greenDdot"></span></div></th>
+			  <th align="center" valign="middle"> <div class="dotContenaier"><span class="greenDdot"></span></div></th>
+			  <th align="center" valign="middle"> <div class="dotContenaier"><span class="greenDdot"></span></div></th>
+			  <th align="center" valign="middle"> <div class="dotContenaier"><span class="greenDdot"></span></div></th>
+			  <th align="center" valign="middle"> <div class="dotContenaier"><span class="greenDdot"></span></div></th>
+			  <th align="center" valign="middle"> <div class="dotContenaier"><span class="redDdot"></span></div></th>
+			  <th align="center" valign="middle"> <div class="dotContenaier"><span class="greenDdot"></span></div></th>
+			  <th align="center" valign="middle"> <div class="dotContenaier"><span class="redDdot"></span></div></th>			
+		  </tr>		   
+		  <tr>
+			  <td class="campaign" align="center"><img _ngcontent-rdv-c2="" alt="" src="../../../assets/img/microsoft.jpg" title="Microsoft" height="25px"></td>
+			  <td align="center" valign="middle"> <div class="dotContenaier"><span class="greenDdot"></span></div></td>
+			  <td align="center" valign="middle"> <div class="dotContenaier"><span class="greenDdot"></span></div></td>
+			  <td align="center" valign="middle"> <div class="dotContenaier"><span class="greenDdot"></span></div></td>
+			  <td align="center" valign="middle"> <div class="dotContenaier"><span class="greenDdot"></span></div></td>
+			  <td align="center" valign="middle"> <div class="dotContenaier"><span class="greenDdot"></span></div></td>
+			  <td align="center" valign="middle"> <div class="dotContenaier"><span class="redDdot"></span></div></td>
+			  <td align="center" valign="middle"> <div class="dotContenaier"><span class="greenDdot"></span></div></td>
+			  <td align="center" valign="middle"> <div class="dotContenaier"><span class="redDdot"></span></div></td>			
+		  </tr>
+		  <tr>
+			  <th class="campaign" align="center"><img _ngcontent-rdv-c2="" alt="" src="../../../assets/img/P&G_logo.png" title="Procter & Gamble" height="25px"></th>
+			  <th align="center" valign="middle"> <div class="dotContenaier"><span class="greenDdot"></span></div></th>
+			  <th align="center" valign="middle"> <div class="dotContenaier"><span class="greenDdot"></span></div></th>
+			  <th align="center" valign="middle"> <div class="dotContenaier"><span class="greenDdot"></span></div></th>
+			  <th align="center" valign="middle"> <div class="dotContenaier"><span class="greenDdot"></span></div></th>
+			  <th align="center" valign="middle"> <div class="dotContenaier"><span class="greenDdot"></span></div></th>
+			  <th align="center" valign="middle"> <div class="dotContenaier"><span class="redDdot"></span></div></th>
+			  <th align="center" valign="middle"> <div class="dotContenaier"><span class="greenDdot"></span></div></th>
+			  <th align="center" valign="middle"> <div class="dotContenaier"><span class="redDdot"></span></div></th>			
+		  </tr>
+					   <tr>
+			  <td class="campaign" align="center"><img _ngcontent-rdv-c2="" alt="" src="../../../assets/img/logo.jpg" title="Sprint" height="25px"></td>
+			  <td align="center" valign="middle"> <div class="dotContenaier"><span class="greenDdot"></span></div></td>
+			  <td align="center" valign="middle"> <div class="dotContenaier"><span class="greenDdot"></span></div></td>
+			  <td align="center" valign="middle"> <div class="dotContenaier"><span class="greenDdot"></span></div></td>
+			  <td align="center" valign="middle"> <div class="dotContenaier"><span class="greenDdot"></span></div></td>
+			  <td align="center" valign="middle"> <div class="dotContenaier"><span class="greenDdot"></span></div></td>
+			  <td align="center" valign="middle"> <div class="dotContenaier"><span class="redDdot"></span></div></td>
+			  <td align="center" valign="middle"> <div class="dotContenaier"><span class="greenDdot"></span></div></td>
+			  <td align="center" valign="middle"> <div class="dotContenaier"><span class="redDdot"></span></div></td>			
+		  </tr>
+		  <tr>
+			  <th class="campaign" align="center"><img _ngcontent-rdv-c2="" alt="" src="../../../assets/img/bmw.jpg" title="BMW" height="25px"></th>
+			  <th align="center" valign="middle"> <div class="dotContenaier"><span class="greenDdot"></span></div></th>
+			  <th align="center" valign="middle"> <div class="dotContenaier"><span class="greenDdot"></span></div></th>
+			  <th align="center" valign="middle"> <div class="dotContenaier"><span class="greenDdot"></span></div></th>
+			  <th align="center" valign="middle"> <div class="dotContenaier"><span class="greenDdot"></span></div></th>
+			  <th align="center" valign="middle"> <div class="dotContenaier"><span class="greenDdot"></span></div></th>
+			  <th align="center" valign="middle"> <div class="dotContenaier"><span class="redDdot"></span></div></th>
+			  <th align="center" valign="middle"> <div class="dotContenaier"><span class="greenDdot"></span></div></th>
+			  <th align="center" valign="middle"> <div class="dotContenaier"><span class="redDdot"></span></div></th>			
+		  </tr>
+		  <tr>
+			  <td class="campaign" align="center"><img _ngcontent-rdv-c2="" alt="" src="../../../assets/img/download.png" title="Canon"  height="25px"></td>
+			  <td align="center" valign="middle"> <div class="dotContenaier"><span class="greenDdot"></span></div></td>
+			  <td align="center" valign="middle"> <div class="dotContenaier"><span class="greenDdot"></span></div></td>
+			  <td align="center" valign="middle"> <div class="dotContenaier"><span class="greenDdot"></span></div></td>
+			  <td align="center" valign="middle"> <div class="dotContenaier"><span class="greenDdot"></span></div></td>
+			  <td align="center" valign="middle"> <div class="dotContenaier"><span class="greenDdot"></span></div></td>
+			  <td align="center" valign="middle"> <div class="dotContenaier"><span class="redDdot"></span></div></td>
+			  <td align="center" valign="middle"> <div class="dotContenaier"><span class="greenDdot"></span></div></td>
+			  <td align="center" valign="middle"> <div class="dotContenaier"><span class="redDdot"></span></div></td>			
+		  </tr>
+		  <tr>
+			  <th class="campaign" align="center"><img _ngcontent-rdv-c2="" alt="" src="../../../assets/img/ebay.png" title="ebay"  height="25px"></th>
+			  <th align="center" valign="middle"> <div class="dotContenaier"><span class="greenDdot"></span></div></th>
+			  <th align="center" valign="middle"> <div class="dotContenaier"><span class="greenDdot"></span></div></th>
+			  <th align="center" valign="middle"> <div class="dotContenaier"><span class="greenDdot"></span></div></th>
+			  <th align="center" valign="middle"> <div class="dotContenaier"><span class="greenDdot"></span></div></th>
+			  <th align="center" valign="middle"> <div class="dotContenaier"><span class="greenDdot"></span></div></th>
+			  <th align="center" valign="middle"> <div class="dotContenaier"><span class="redDdot"></span></div></th>
+			  <th align="center" valign="middle"> <div class="dotContenaier"><span class="greenDdot"></span></div></th>
+			  <th align="center" valign="middle"> <div class="dotContenaier"><span class="redDdot"></span></div></th>			
+		  </tr>		   
+		  <tr>
+			  <td class="campaign" align="center"><img _ngcontent-rdv-c2="" alt="" src="../../../assets/img/microsoft.jpg" title="Microsoft" height="25px"></td>
+			  <td align="center" valign="middle"> <div class="dotContenaier"><span class="greenDdot"></span></div></td>
+			  <td align="center" valign="middle"> <div class="dotContenaier"><span class="greenDdot"></span></div></td>
+			  <td align="center" valign="middle"> <div class="dotContenaier"><span class="greenDdot"></span></div></td>
+			  <td align="center" valign="middle"> <div class="dotContenaier"><span class="greenDdot"></span></div></td>
+			  <td align="center" valign="middle"> <div class="dotContenaier"><span class="greenDdot"></span></div></td>
+			  <td align="center" valign="middle"> <div class="dotContenaier"><span class="redDdot"></span></div></td>
+			  <td align="center" valign="middle"> <div class="dotContenaier"><span class="greenDdot"></span></div></td>
+			  <td align="center" valign="middle"> <div class="dotContenaier"><span class="redDdot"></span></div></td>			
+		  </tr>
+		  <tr>
+			  <th class="campaign" align="center"><img _ngcontent-rdv-c2="" alt="" src="../../../assets/img/P&G_logo.png" title="Procter & Gamble" height="25px"></th>
+			  <th align="center" valign="middle"> <div class="dotContenaier"><span class="greenDdot"></span></div></th>
+			  <th align="center" valign="middle"> <div class="dotContenaier"><span class="greenDdot"></span></div></th>
+			  <th align="center" valign="middle"> <div class="dotContenaier"><span class="greenDdot"></span></div></th>
+			  <th align="center" valign="middle"> <div class="dotContenaier"><span class="greenDdot"></span></div></th>
+			  <th align="center" valign="middle"> <div class="dotContenaier"><span class="greenDdot"></span></div></th>
+			  <th align="center" valign="middle"> <div class="dotContenaier"><span class="redDdot"></span></div></th>
+			  <th align="center" valign="middle"> <div class="dotContenaier"><span class="greenDdot"></span></div></th>
+			  <th align="center" valign="middle"> <div class="dotContenaier"><span class="redDdot"></span></div></th>			
+		  </tr>
+					   <tr>
+			  <td class="campaign" align="center"><img _ngcontent-rdv-c2="" alt="" src="../../../assets/img/logo.jpg" title="Sprint" height="25px"></td>
+			  <td align="center" valign="middle"> <div class="dotContenaier"><span class="greenDdot"></span></div></td>
+			  <td align="center" valign="middle"> <div class="dotContenaier"><span class="greenDdot"></span></div></td>
+			  <td align="center" valign="middle"> <div class="dotContenaier"><span class="greenDdot"></span></div></td>
+			  <td align="center" valign="middle"> <div class="dotContenaier"><span class="greenDdot"></span></div></td>
+			  <td align="center" valign="middle"> <div class="dotContenaier"><span class="greenDdot"></span></div></td>
+			  <td align="center" valign="middle"> <div class="dotContenaier"><span class="redDdot"></span></div></td>
+			  <td align="center" valign="middle"> <div class="dotContenaier"><span class="greenDdot"></span></div></td>
+			  <td align="center" valign="middle"> <div class="dotContenaier"><span class="redDdot"></span></div></td>			
+		  </tr>
+		  <tr>
+			  <th class="campaign" align="center"><img _ngcontent-rdv-c2="" alt="" src="../../../assets/img/bmw.jpg" title="BMW" height="25px"></th>
+			  <th align="center" valign="middle"> <div class="dotContenaier"><span class="greenDdot"></span></div></th>
+			  <th align="center" valign="middle"> <div class="dotContenaier"><span class="greenDdot"></span></div></th>
+			  <th align="center" valign="middle"> <div class="dotContenaier"><span class="greenDdot"></span></div></th>
+			  <th align="center" valign="middle"> <div class="dotContenaier"><span class="greenDdot"></span></div></th>
+			  <th align="center" valign="middle"> <div class="dotContenaier"><span class="greenDdot"></span></div></th>
+			  <th align="center" valign="middle"> <div class="dotContenaier"><span class="redDdot"></span></div></th>
+			  <th align="center" valign="middle"> <div class="dotContenaier"><span class="greenDdot"></span></div></th>
+			  <th align="center" valign="middle"> <div class="dotContenaier"><span class="redDdot"></span></div></th>			
+		  </tr>
+		  <tr>
+			  <td class="campaign" align="center"><img _ngcontent-rdv-c2="" alt="" src="../../../assets/img/download.png" title="Canon"  height="25px"></td>
+			  <td align="center" valign="middle"> <div class="dotContenaier"><span class="greenDdot"></span></div></td>
+			  <td align="center" valign="middle"> <div class="dotContenaier"><span class="greenDdot"></span></div></td>
+			  <td align="center" valign="middle"> <div class="dotContenaier"><span class="greenDdot"></span></div></td>
+			  <td align="center" valign="middle"> <div class="dotContenaier"><span class="greenDdot"></span></div></td>
+			  <td align="center" valign="middle"> <div class="dotContenaier"><span class="greenDdot"></span></div></td>
+			  <td align="center" valign="middle"> <div class="dotContenaier"><span class="redDdot"></span></div></td>
+			  <td align="center" valign="middle"> <div class="dotContenaier"><span class="greenDdot"></span></div></td>
+			  <td align="center" valign="middle"> <div class="dotContenaier"><span class="redDdot"></span></div></td>			
+		  </tr>
+		  <tr>
+			  <th class="campaign" align="center"><img _ngcontent-rdv-c2="" alt="" src="../../../assets/img/ebay.png" title="ebay"  height="25px"></th>
+			  <th align="center" valign="middle"> <div class="dotContenaier"><span class="greenDdot"></span></div></th>
+			  <th align="center" valign="middle"> <div class="dotContenaier"><span class="greenDdot"></span></div></th>
+			  <th align="center" valign="middle"> <div class="dotContenaier"><span class="greenDdot"></span></div></th>
+			  <th align="center" valign="middle"> <div class="dotContenaier"><span class="greenDdot"></span></div></th>
+			  <th align="center" valign="middle"> <div class="dotContenaier"><span class="greenDdot"></span></div></th>
+			  <th align="center" valign="middle"> <div class="dotContenaier"><span class="redDdot"></span></div></th>
+			  <th align="center" valign="middle"> <div class="dotContenaier"><span class="greenDdot"></span></div></th>
+			  <th align="center" valign="middle"> <div class="dotContenaier"><span class="redDdot"></span></div></th>			
+		  </tr>		   
+		  <tr>
+			  <td class="campaign" align="center"><img _ngcontent-rdv-c2="" alt="" src="../../../assets/img/microsoft.jpg" title="Microsoft" height="25px"></td>
+			  <td align="center" valign="middle"> <div class="dotContenaier"><span class="greenDdot"></span></div></td>
+			  <td align="center" valign="middle"> <div class="dotContenaier"><span class="greenDdot"></span></div></td>
+			  <td align="center" valign="middle"> <div class="dotContenaier"><span class="greenDdot"></span></div></td>
+			  <td align="center" valign="middle"> <div class="dotContenaier"><span class="greenDdot"></span></div></td>
+			  <td align="center" valign="middle"> <div class="dotContenaier"><span class="greenDdot"></span></div></td>
+			  <td align="center" valign="middle"> <div class="dotContenaier"><span class="redDdot"></span></div></td>
+			  <td align="center" valign="middle"> <div class="dotContenaier"><span class="greenDdot"></span></div></td>
+			  <td align="center" valign="middle"> <div class="dotContenaier"><span class="redDdot"></span></div></td>			
+		  </tr>
+		  <tr>
+			  <th class="campaign" align="center"><img _ngcontent-rdv-c2="" alt="" src="../../../assets/img/P&G_logo.png" title="Procter & Gamble" height="25px"></th>
+			  <th align="center" valign="middle"> <div class="dotContenaier"><span class="greenDdot"></span></div></th>
+			  <th align="center" valign="middle"> <div class="dotContenaier"><span class="greenDdot"></span></div></th>
+			  <th align="center" valign="middle"> <div class="dotContenaier"><span class="greenDdot"></span></div></th>
+			  <th align="center" valign="middle"> <div class="dotContenaier"><span class="greenDdot"></span></div></th>
+			  <th align="center" valign="middle"> <div class="dotContenaier"><span class="greenDdot"></span></div></th>
+			  <th align="center" valign="middle"> <div class="dotContenaier"><span class="redDdot"></span></div></th>
+			  <th align="center" valign="middle"> <div class="dotContenaier"><span class="greenDdot"></span></div></th>
+			  <th align="center" valign="middle"> <div class="dotContenaier"><span class="redDdot"></span></div></th>			
+		  </tr>
+					   <tr>
+			  <td class="campaign" align="center"><img _ngcontent-rdv-c2="" alt="" src="../../../assets/img/logo.jpg" title="Sprint" height="25px"></td>
+			  <td align="center" valign="middle"> <div class="dotContenaier"><span class="greenDdot"></span></div></td>
+			  <td align="center" valign="middle"> <div class="dotContenaier"><span class="greenDdot"></span></div></td>
+			  <td align="center" valign="middle"> <div class="dotContenaier"><span class="greenDdot"></span></div></td>
+			  <td align="center" valign="middle"> <div class="dotContenaier"><span class="greenDdot"></span></div></td>
+			  <td align="center" valign="middle"> <div class="dotContenaier"><span class="greenDdot"></span></div></td>
+			  <td align="center" valign="middle"> <div class="dotContenaier"><span class="redDdot"></span></div></td>
+			  <td align="center" valign="middle"> <div class="dotContenaier"><span class="greenDdot"></span></div></td>
+			  <td align="center" valign="middle"> <div class="dotContenaier"><span class="redDdot"></span></div></td>			
+		  </tr>
+		  <tr>
+			  <th class="campaign" align="center"><img _ngcontent-rdv-c2="" alt="" src="../../../assets/img/bmw.jpg" title="BMW" height="25px"></th>
+			  <th align="center" valign="middle"> <div class="dotContenaier"><span class="greenDdot"></span></div></th>
+			  <th align="center" valign="middle"> <div class="dotContenaier"><span class="greenDdot"></span></div></th>
+			  <th align="center" valign="middle"> <div class="dotContenaier"><span class="greenDdot"></span></div></th>
+			  <th align="center" valign="middle"> <div class="dotContenaier"><span class="greenDdot"></span></div></th>
+			  <th align="center" valign="middle"> <div class="dotContenaier"><span class="greenDdot"></span></div></th>
+			  <th align="center" valign="middle"> <div class="dotContenaier"><span class="redDdot"></span></div></th>
+			  <th align="center" valign="middle"> <div class="dotContenaier"><span class="greenDdot"></span></div></th>
+			  <th align="center" valign="middle"> <div class="dotContenaier"><span class="redDdot"></span></div></th>			
+		  </tr>
+		  <tr>
+			  <td class="campaign" align="center"><img _ngcontent-rdv-c2="" alt="" src="../../../assets/img/download.png" title="Canon"  height="25px"></td>
+			  <td align="center" valign="middle"> <div class="dotContenaier"><span class="greenDdot"></span></div></td>
+			  <td align="center" valign="middle"> <div class="dotContenaier"><span class="greenDdot"></span></div></td>
+			  <td align="center" valign="middle"> <div class="dotContenaier"><span class="greenDdot"></span></div></td>
+			  <td align="center" valign="middle"> <div class="dotContenaier"><span class="greenDdot"></span></div></td>
+			  <td align="center" valign="middle"> <div class="dotContenaier"><span class="greenDdot"></span></div></td>
+			  <td align="center" valign="middle"> <div class="dotContenaier"><span class="redDdot"></span></div></td>
+			  <td align="center" valign="middle"> <div class="dotContenaier"><span class="greenDdot"></span></div></td>
+			  <td align="center" valign="middle"> <div class="dotContenaier"><span class="redDdot"></span></div></td>			
+		  </tr>
+		  <tr>
+			  <th class="campaign" align="center"><img _ngcontent-rdv-c2="" alt="" src="../../../assets/img/ebay.png" title="ebay"  height="25px"></th>
+			  <th align="center" valign="middle"> <div class="dotContenaier"><span class="greenDdot"></span></div></th>
+			  <th align="center" valign="middle"> <div class="dotContenaier"><span class="greenDdot"></span></div></th>
+			  <th align="center" valign="middle"> <div class="dotContenaier"><span class="greenDdot"></span></div></th>
+			  <th align="center" valign="middle"> <div class="dotContenaier"><span class="greenDdot"></span></div></th>
+			  <th align="center" valign="middle"> <div class="dotContenaier"><span class="greenDdot"></span></div></th>
+			  <th align="center" valign="middle"> <div class="dotContenaier"><span class="redDdot"></span></div></th>
+			  <th align="center" valign="middle"> <div class="dotContenaier"><span class="greenDdot"></span></div></th>
+			  <th align="center" valign="middle"> <div class="dotContenaier"><span class="redDdot"></span></div></th>			
+		  </tr>		   
+		  <tr>
+			  <td class="campaign" align="center"><img _ngcontent-rdv-c2="" alt="" src="../../../assets/img/microsoft.jpg" title="Microsoft" height="25px"></td>
+			  <td align="center" valign="middle"> <div class="dotContenaier"><span class="greenDdot"></span></div></td>
+			  <td align="center" valign="middle"> <div class="dotContenaier"><span class="greenDdot"></span></div></td>
+			  <td align="center" valign="middle"> <div class="dotContenaier"><span class="greenDdot"></span></div></td>
+			  <td align="center" valign="middle"> <div class="dotContenaier"><span class="greenDdot"></span></div></td>
+			  <td align="center" valign="middle"> <div class="dotContenaier"><span class="greenDdot"></span></div></td>
+			  <td align="center" valign="middle"> <div class="dotContenaier"><span class="redDdot"></span></div></td>
+			  <td align="center" valign="middle"> <div class="dotContenaier"><span class="greenDdot"></span></div></td>
+			  <td align="center" valign="middle"> <div class="dotContenaier"><span class="redDdot"></span></div></td>			
+		  </tr>
+		  <tr>
+			  <th class="campaign" align="center"><img _ngcontent-rdv-c2="" alt="" src="../../../assets/img/P&G_logo.png" title="Procter & Gamble" height="25px"></th>
+			  <th align="center" valign="middle"> <div class="dotContenaier"><span class="greenDdot"></span></div></th>
+			  <th align="center" valign="middle"> <div class="dotContenaier"><span class="greenDdot"></span></div></th>
+			  <th align="center" valign="middle"> <div class="dotContenaier"><span class="greenDdot"></span></div></th>
+			  <th align="center" valign="middle"> <div class="dotContenaier"><span class="greenDdot"></span></div></th>
+			  <th align="center" valign="middle"> <div class="dotContenaier"><span class="greenDdot"></span></div></th>
+			  <th align="center" valign="middle"> <div class="dotContenaier"><span class="redDdot"></span></div></th>
+			  <th align="center" valign="middle"> <div class="dotContenaier"><span class="greenDdot"></span></div></th>
+			  <th align="center" valign="middle"> <div class="dotContenaier"><span class="redDdot"></span></div></th>			
+		  </tr>
+		</tbody>
+		<!--Table body-->
+  
+	  </table>
+  </div>
+  
+  
+  
+  
+  
+			  </div>
+			  </div> 
+			   </div>
+			   </div>
+			</div>
+		</div>
+	  </div>
+  

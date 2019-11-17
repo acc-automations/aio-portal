@@ -1,0 +1,161 @@
+
+<div class="main-content">
+    <div class="container-fluid">
+     <div class="row">
+        <div class="col-lg-12 col-md-12">
+             
+              <!-- ======================== We @ Accenture ============================ -->			  
+            <div class="card card-stats EmployeesStatsboxBg">
+                      <div class="card-header card-header-warning card-header-icon customIconBg" style="padding-right: 10px;">
+                          <div class="dealPerfrom">
+                              <span style=" float: left; margin: 0; padding:0;"><i class="material-icons" title="We @ Accenture">highlight</i></span>
+                              <h3 class="card-title" style=" display: flex; line-height:55px;">We @ Accenture</h3>
+                          </div>
+                      </div>
+  <div class="card-body">					
+  <div class="row ">
+  <div class="col-md-4"><mat-form-field class="example-full-width"><input matInput placeholder="Weeks"></mat-form-field></div>	
+  <div class="col-md-4"><mat-form-field>
+      <mat-select placeholder="Months">
+   <mat-option value="">January</mat-option>
+   <mat-option value="">February</mat-option>
+   <mat-option value="">March</mat-option>
+   <mat-option value=""> April</mat-option>
+   <mat-option value="">May</mat-option>
+   <mat-option value="">June</mat-option>
+   <mat-option value="">July</mat-option>
+   <mat-option value="">August</mat-option>
+   <mat-option value="">September</mat-option>
+   <mat-option value="">October</mat-option>
+   <mat-option value="">November</mat-option>
+   <mat-option value="">December</mat-option>
+      </mat-select></mat-form-field>
+      
+      </div>
+  <div class="col-md-4"><mat-form-field class="example-full-width"><input matInput placeholder="Year"></mat-form-field></div>
+  </div> 
+  <div class="row ">
+  <div class="col-lg-3 col-md-3 col-sm-3">
+  <span class="mat-select-placeholder ng-tns-c7-705 ng-star-inserted FinanceBrowse">&nbsp;</span>	
+  <div class="user-area dropdown">			
+  <input type="file" class="custom-file-input" id="customFileLang" style="display: none;">
+  <label class="btn ~btn-success" for="customFileLang">Upload File 1</label>				
+  </div>
+  </div>
+  <div class="col-lg-3 col-md-3 col-sm-3">
+  <span class="mat-select-placeholder ng-tns-c7-705 ng-star-inserted FinanceBrowse">&nbsp;</span>	
+  <div class="user-area dropdown">			
+  <input type="file" class="custom-file-input" id="customFileLang" style="display: none;">
+  <label class="btn ~btn-success" for="customFileLang">Upload File 2</label>				
+  </div>
+  </div>
+  <div class="col-lg-3 col-md-3 col-sm-3">
+  <span class="mat-select-placeholder ng-tns-c7-705 ng-star-inserted FinanceBrowse">&nbsp;</span>	
+  <div class="user-area dropdown">			
+  <input type="file" class="custom-file-input" id="customFileLang" style="display: none;">
+  <label class="btn ~btn-success" for="customFileLang">Upload File 3</label>				
+  </div>
+  </div>
+  <div class="col-lg-3 col-md-3 col-sm-3">&nbsp;</div>	
+  </div>
+  <div class="row ">
+  <div class="col-lg-12 col-md-12 col-sm-12"><button class="mat-raised-button mat-button-base mat-primary" mat-button style=" margin-top: 15px; padding: 2px 15px; color: #000; background-color:#ffd060;"><i class="material-icons">touch_app</i> Save </button></div>
+      </div> 	
+      
+          </div>         
+          </div>		  
+          <!-- ======================== We @ Accenture ============================ -->	
+           		  	
+            
+        </div>
+     
+   
+        
+      </div>
+  </div>
+  </div>
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <h4>Current Week Data:</h4>
+            <table class="table table-condensed table-bordered">
+                <tr>
+                    <th>Year</th>
+                    <th>Week</th>
+                    <th>No. of Ideas Submitted</th>
+                    <th>Red Flagged Ideas</th>
+                    <th>IPP</th>
+                    <th>Implementation Rate</th>
+                    <th>Ontime Implementation Rate</th>
+                    <th>Validation Rate</th>
+                    <th>Ideas Red Flagged - 7 Days</th>
+                    <th>Ideas Red Flagged - 30 Days</th>
+                </tr>
+                
+                <tr>
+                    
+                    <td>2019</td>
+                    <td>xx</td>
+                    
+                    <td>{{we_at_current.ideas_submited_count}}</td>
+                    <td>{{we_at_current.red_flagged_ideas}}</td>
+                    <td>{{ ((( we_at_current.ideas_submited_count - we_at_current.red_flagged_ideas ) / active_deal_headcount ) / 12 ) }}</td>
+                    <td>{{we_at_current.implementation_rate}}</td>
+                    <td>{{we_at_current.ontime_implementation_rate }}</td>
+                    <td>{{we_at_current.validation_rate}}</td>
+                    <td>{{we_at_current.ideas_redflagged_7days}}</td>
+                    <td>{{we_at_current.ideas_redflagged_30days}}</td>
+            
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <h4>Weekly Stack:</h4>
+            <table class="table table-condensed table-bordered">
+                <tr>
+                    <th>Year</th>
+                    <th>Week</th>
+                    <th>No. of Ideas Submitted</th>
+                    <th>Red Flagged Ideas</th>
+                    <th>IPP</th>
+                    <th>Implementation Rate</th>
+                    <th>Ontime Implementation Rate</th>
+                    <th>Validation Rate</th>
+                    <th>Ideas Red Flagged - 7 Days</th>
+                    <th>Ideas Red Flagged - 30 Days</th>
+                </tr>
+                
+                <tr *ngFor="let week of weekly_data">
+                    
+                    <td>{{week.year}}</td>
+                    <td>{{week.week}}</td>
+                    <td>{{week.data.ideas_submited_count}}</td>
+                    <td>{{week.data.red_flagged_ideas}}</td>
+                    <td>{{ ((( week.data.ideas_submited_count - week.data.red_flagged_ideas ) / active_deal_headcount ) / 12 ) }}</td>
+                    <td>{{week.data.implementation_rate}}</td>
+                    <td>{{week.data.ontime_implementation_rate }}</td>
+                    <td>{{week.data.validation_rate}}</td>
+                    <td>{{week.data.ideas_redflagged_7days}}</td>
+                    <td>{{week.data.ideas_redflagged_30days}}</td>
+            
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+

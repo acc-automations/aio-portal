@@ -1,0 +1,711 @@
+<div class="main-content">
+   <div class="container-fluid">
+      <!-- top color catagory -->
+      <div class="col-sm-12 mb-4">
+         <div class="card-group topLine">
+            <div class="card no-padding carddotContenaier">
+               <div>
+                  <div class="DP-Fontsize">Client Sat</div>
+                  <div class="dotContenaier"> <span class="greenDdot"></span>
+                  </div>
+               </div>
+            </div>
+            <div class="card no-padding carddotContenaier">
+               <div>
+                  <div class="DP-Fontsize">Finances</div>
+                  <div class="dotContenaier"> <span class="greenDdot"></span>
+                  </div>
+               </div>
+            </div>
+            <div class="card no-padding carddotContenaier">
+               <div>
+                  <div class="DP-Fontsize">Delivery content</div>
+                  <div class="dotContenaier"> <span class="greenDdot"></span>
+                  </div>
+               </div>
+            </div>
+            <div class="card no-padding carddotContenaier">
+               <div>
+                  <div class="DP-Fontsize">Delivery campaign</div>
+                  <div class="dotContenaier"> <span class="greenDdot"></span>
+                  </div>
+               </div>
+            </div>
+            <div class="card no-padding carddotContenaier">
+               <div>
+                  <div class="DP-Fontsize">Delivery other</div>
+                  <div class="dotContenaier"> <span class="greenDdot"></span>
+                  </div>
+               </div>
+            </div>
+            <div class="card no-padding carddotContenaier">
+               <div>
+                  <div class="DP-Fontsize">People</div>
+                  <div class="dotContenaier"> <span class="amberDdot"></span>
+                  </div>
+               </div>
+            </div>
+            <div class="card no-padding carddotContenaier">
+               <div>
+                  <div class="DP-Fontsize">Contractual SLA</div>
+                  <div class="dotContenaier"> <span class="greenDdot"></span>
+                  </div>
+               </div>
+            </div>
+            <div class="card no-padding carddotContenaier">
+               <div>
+                  <div class="DP-Fontsize">Internal SLA</div>
+                  <div class="dotContenaier"> <span class="redDdot"></span>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- end top color catagory -->
+      <!-- ====  two up end  ==== -->
+      <div class="row h3FontType">
+         <div class="col-lg-6 col-md-12 col-sm-12">
+            <div _ngcontent-vop-c5="" class="row">
+               <div class="col-lg-6 col-md-12 col-sm-12">
+                  <div class="card card-stats">
+                     <div class="card-header card-header-warning card-header-icon">
+                        <div class="card-icon bg-threeBG"> <i class="material-icons">account_balance</i>
+                        </div>
+                        <p class="card-category">Finance</p>
+                        <h3 class="card-title FinanceSmall"><small>Annual Revenue</small> $ 1.50 <small>mn</small></h3>
+                     </div>
+                     <div class="card-footer"></div>
+                     <div class="row" style="padding-left: 10px;">						 
+						 <table class="NewFinance" border="0" cellspacing="0" cellpadding="0">
+                           <thead>
+                              <tr>
+								<th scope="col">CVC/TVC</th>
+								<th scope="col">Soln.CCI</th>
+								<th scope="col">Target CCI</th>								
+								<th scope="col">Actual CCI</th>
+                              </tr>
+                           </thead>
+                           <tbody>
+                              <tr>								  
+							    <td data-label="CVC/TVC">$ 1.506</td>
+								<td data-label="Soln.CCI">36%</td>								  
+                                <td data-label="Target CCI">36%</td>                                
+                                <td data-label="Actual CCI">40%</td>
+                              </tr>                         
+						   </tbody>
+						 </table>
+               
+                    </div>
+                     <div class="card-chart cardFinance">
+                        <div class="card-header-success bargraphBg">
+                           <app-finance-skill-graph></app-finance-skill-graph>
+                        </div>
+                     </div>
+                     <div class="row FinanceDropdown">
+                        <div class="col-lg-3 col-md-3 col-sm-3">
+                           <select class="form-control" (change)="handlechange($event.target.value)">
+                              <option *ngFor="let item of filterdropdownFinance;let index = index" value="{{index+1}}">{{item}}</option>
+                           </select>
+                        </div>
+                        <div class="col-lg-3 col-md-3 col-sm-3"><strong>ODE</strong></div>
+                        <div class="col-lg-3 col-md-3 col-sm-3"><strong>Actuals</strong></div>
+                        <div class="col-lg-3 col-md-3 col-sm-3"><strong>Variance</strong></div>
+                        <div class="col-lg-3 col-md-3 col-sm-3"><strong>Revenue</strong></div>
+                        <div class="col-lg-3 col-md-3 col-sm-3">{{SAPrevenue}}</div>
+                        <div class="col-lg-3 col-md-3 col-sm-3">{{MMErevenue}}</div>
+                        <div class="col-lg-3 col-md-3 col-sm-3">{{MMErevenue - SAPrevenue}}</div>
+                        <div class="col-lg-3 col-md-3 col-sm-3"><strong>Cost</strong></div>
+                        <div class="col-lg-3 col-md-3 col-sm-3">{{SAPcontractcost}}</div>
+                        <div class="col-lg-3 col-md-3 col-sm-3">{{MMEcontractcost}}</div>
+                        <div class="col-lg-3 col-md-3 col-sm-3">{{SAPcontractcost-MMEcontractcost}}</div>
+                        <div class="col-lg-3 col-md-3 col-sm-3"><strong>CCI</strong></div>
+                        <div class="col-lg-3 col-md-3 col-sm-3">{{SAPCCI}}</div>
+                        <div class="col-lg-3 col-md-3 col-sm-3">{{MMECCI}}</div>
+                        <div class="col-lg-3 col-md-3 col-sm-3">{{MMECCI - SAPCCI}}</div>
+                        <div class="col-lg-3 col-md-3 col-sm-3"><strong>CCI%</strong></div>
+                        <div class="col-lg-3 col-md-3 col-sm-3">{{SAPCciPercent}}%</div>
+                        <div class="col-lg-3 col-md-3 col-sm-3">{{MmeCciPercent}}%</div>
+                        <div class="col-lg-3 col-md-3 col-sm-3">{{MmeCciPercent - SAPCciPercent}}%</div>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-lg-6 col-md-12 col-sm-12">
+                  <div class="card card-stats">
+                     <div class="card-header card-header-warning card-header-icon">
+                        <div class="card-icon">
+                           <i class="material-icons">account_balance_wallet</i>
+                        </div>
+                        <p class="card-category">India Cost <small>(mn)</small></p>
+                        <h3 class="card-title FinanceSmall"><small>FY19</small> $ 1.50 &nbsp; <small>FY20</small> $ 1.50 </h3>
+                     </div>
+                     <div class="card-footer Headcount">
+                        <table class="Margintable" border="0" cellspacing="0" cellpadding="0">
+                           <thead>
+                              <tr>
+                                 <th scope="col">Levers</th>
+                                 <th scope="col">Targets</th>
+                                 <th scope="col">Actuals</th>
+                              </tr>
+                           </thead>
+                           <tbody>
+                              <tr>
+                                 <td data-label="Levers">Consulting</td>
+                                 <td data-label="Targets">5</td>
+                                 <td data-label="Actuals">10</td>
+                              </tr>
+                              <tr>
+                                 <td data-label="Levers">PMO</td>
+                                 <td data-label="Targets">5</td>
+                                 <td data-label="Actuals">10</td>
+                              </tr>
+                              <tr>
+                                 <td data-label="Levers">SubK</td>
+                                 <td data-label="Targets">5</td>
+                                 <td data-label="Actuals">10</td>
+                              </tr>
+                              <tr>
+                                 <td data-label="Levers">Pyramid Slendering</td>
+                                 <td data-label="Targets">5</td>
+                                 <td data-label="Actuals">10</td>
+                              </tr>
+                              <tr>
+                                 <td data-label="Levers">Payroll Exec</td>
+                                 <td data-label="Targets">5</td>
+                                 <td data-label="Actuals">10</td>
+                              </tr>
+                              <tr>
+                                 <td data-label="Levers">Higher Vacation</td>
+                                 <td data-label="Targets">5</td>
+                                 <td data-label="Actuals">10</td>
+                              </tr>
+                              <tr>
+                                 <td data-label="Levers">PD&R</td>
+                                 <td data-label="Targets">5</td>
+                                 <td data-label="Actuals" class="redvalue">1</td>
+                              </tr>
+                              <tr>
+                                 <td data-label="Levers">Automation</td>
+                                 <td data-label="Targets">5</td>
+                                 <td data-label="Actuals">10</td>
+                              </tr>
+                              <tr>
+                                 <td data-label="Levers">Agile</td>
+                                 <td data-label="Targets">5</td>
+                                 <td data-label="Actuals">10</td>
+                              </tr>
+                              <tr>
+                                 <td data-label="Levers">Offshore</td>
+                                 <td data-label="Targets">7</td>
+                                 <td data-label="Actuals" class="redvalue">4</td>
+                              </tr>
+                              <tr>
+                                 <td data-label="Levers">Shift Utilization</td>
+                                 <td data-label="Targets">20</td>
+                                 <td data-label="Actuals">22</td>
+                              </tr>
+                              <tr>
+                                 <td data-label="Levers">WFH</td>
+                                 <td data-label="Targets">50</td>
+                                 <td data-label="Actuals" class="redvalue">40</td>
+                              </tr>
+                              <tr>
+                                 <td data-label="Levers">Travel</td>
+                                 <td data-label="Targets">100</td>
+                                 <td data-label="Actuals">100</td>
+                              </tr>
+                              <tr>
+                                 <td data-label="Levers">Technology</td>
+                                 <td data-label="Targets">100</td>
+                                 <td data-label="Actuals">100</td>
+                              </tr>
+                              <tr>
+                                 <td data-label="Levers">Others</td>
+                                 <td data-label="Targets">100</td>
+                                 <td data-label="Actuals" >100</td>
+                              </tr>
+                           </tbody>
+                        </table>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <!-- pai  section  -->
+         <div class="col-lg-6 col-md-12 col-sm-12">
+
+            <div class="card card-stats EmployeesStatsboxBg" style=" background: #fff;">
+               <div class="card-header card-header-warning card-header-icon customIconBg" style="padding-right: 10px;">
+                  <div class="dealPerfrom">
+                     <span style=" float: left; margin: 0; padding:0; "><i class="material-icons">people_alt</i></span>
+                     <h3 class="card-title" style=" display: flex; line-height: 49px;">Employees Stats</h3>
+                  </div>
+                  <p class="card-category" style=" line-height: 46px"><em>Our People makes the difference</em></p>
+               </div>
+               <div class="row">
+                  
+				  <div class="col-lg-9 col-md-8 col-sm-9">  
+                     <div class="circle">
+                        <div class="circle__inner">
+                           <span>PI {{pyramidIndexCount}}</span>
+                           <small><i class="fa fa-users"></i>{{totalHc}}</small>
+                           <small style="color:#A0A0A0"><i class="material-icons" style="color:#A0A0A0; font-size:1.3em">airline_seat_recline_extra</i>{{seatUtilizationCount}}({{seatUtilizationp}})</small>
+                        </div>
+                        <app-piechart></app-piechart>
+                     </div>
+                  </div>
+				   <div class="col-lg-3 col-md-4 col-sm-4 rightEmployeesStats"> 
+                  
+                     <div class="Addicon">
+                        <p><small>{{malecount}}%</small><span class="card-category"><i class="fa fa-male" style="color:#0098ff"></i>
+                           <strong>Male</strong> </span>
+                        </p>
+                     </div>
+                     <div class="Addicon">
+                        <p><small>{{femalecount}}%</small>
+                           <span class="card-category"><i class="fa fa-female" style="color:#ff5478"></i> <strong>Diversity</strong></span>
+                        </p>
+                     </div>
+                     <div class="Addicon">
+                        <p><small>{{contractorCount}}%</small>
+                           <span class="card-category"><i class="fa fa-universal-access" style=" color:#81a600 "></i><strong>Contractors</strong></span>
+                        </p>
+                     </div>
+                     <div class="Addicon">
+                        <p><small [style.color]="redepCount > '0' ? 'red' : 'green'">{{redepCount}}%</small>
+                           <span class="card-category"><i class="material-icons" style="color:#ff0c00; margin-bottom:43px;">emoji_people</i><strong>Redep</strong></span>
+                        </p>
+                     </div>
+                     <div class="Addicon">
+                        <p><small>{{attritionCount}}%</small>
+                           <span class="card-category"><i class="material-icons" style="color:#007809; margin-bottom:43px;">directions_run</i><strong>Attrition</strong></span>
+                        </p>
+                     </div>
+                     <div class="Addicon">
+                        <p><small>{{hipoattritionCount}}%</small>
+                           <span class="card-category"><i class="material-icons" style="color:#ff9c00; margin-bottom:43px;">directions_walk</i><strong>HIPO </strong></span>
+                        </p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <!-- pai  section  -->
+      </div> 
+      <!-- pai  section end  -->
+      <div class="row h3FontType">
+         <div class="col-lg-12 col-md-12 col-sm-12">
+            <div class="row">
+               <div class="col-lg-4 col-md-12 col-sm-12">
+                  <div class="card card-stats">
+                     <div class="card-header card-header-danger card-header-icon">
+                        <div class="card-icon"> <i class="material-icons">monetization_on</i>
+                        </div>
+                        <p class="card-category"> UpSells </p>
+                        <h3 class="card-title FinanceSmall"><small>YTD Rev.</small> $ 0.100 <small>mn </small></h3>
+                     </div>
+                     <div class="card-footer Headcount">
+                        <table class="Organictable" border="0" cellspacing="0" cellpadding="0">
+                           <thead>
+                              <tr>
+                                 <th scope="col">Headcount</th>
+                                 <th scope="col">Of Contract</th>
+                              </tr>
+                           </thead>
+                           <tbody>
+                              <tr>
+                                 <td data-label="Headcount">200</td>
+                                 <td data-label="Of Contract">2</td>
+                              </tr>
+                           </tbody>
+                        </table>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-lg-4 col-md-12 col-sm-12">
+                  <div class="card card-stats">
+                     <div class="card-header card-header-danger card-header-icon">
+                        <div class="card-icon"> <i class="material-icons">person_add</i>
+                        </div>
+                        <p class="card-category"> Expected Organic HC </p>
+                        <h3 class="card-title FinanceSmall">10 </h3>
+                     </div>
+                     <div class="card-footer Headcount">
+                        <table class="Organictable" border="0" cellspacing="0" cellpadding="0">
+                           <thead>
+                              <tr>
+                                 <th scope="col">Q1</th>
+                                 <th scope="col">Q2</th>
+                                 <th scope="col">Q3</th>
+                                 <th scope="col">Q4</th>
+                              </tr>
+                           </thead>
+                           <tbody>
+                              <tr>
+                                 <td data-label="Q1">10</td>
+                                 <td data-label="Q2">15</td>
+                                 <td data-label="Q3">20</td>
+                                 <td data-label="Q4">25</td>
+                              </tr>
+                           </tbody>
+                        </table>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-lg-4 col-md-12 col-sm-12">
+                  <div class="card card-stats">
+                     <div class="card-header card-header-warning card-header-icon">
+                        <div class="card-icon bg-threeBG">  <i class="material-icons">person_add</i>
+                        </div>
+                        <p class="card-category">We @ Accenture </p>
+                        <h3 class="card-title FinanceSmall">1.5 <small>IPP</small></h3>
+                     </div>
+                     <div class="card-footer Headcount Wefontstyle">
+                        <div class="col-lg-7 col-md-7 col-sm-7">Implementation rate  <small> (30%) </small></div>
+                        <div class="col-lg-3 col-md-3 col-sm-3 card-title">100%
+                        </div>
+                     </div>
+                     <div class="card-footer Headcount Wefontstyle">
+                        <div class="col-lg-7 col-md-7 col-sm-7">OnTime Implementation  <small> (30%) </small></div>
+                        <div class="col-lg-3 col-md-3 col-sm-3 card-title">80%
+                        </div>
+                     </div>
+                     <div class="card-footer Headcount Wefontstyle">
+                        <div class="col-lg-7 col-md-7 col-sm-7">Implementation rate  <small> (20%) </small></div>
+                        <div class="col-lg-3 col-md-3 col-sm-3 card-title">85%
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="row h3FontType">
+         <div class="col-lg-12 col-md-12 col-sm-12">
+            <div class="row">
+               <div class="col-lg-4 col-md-12 col-sm-12">
+                  <div class="card card-stats">
+                     <div class="card-header card-header-danger card-header-icon">
+                        <div class="card-icon"> <i class="material-icons"> school</i>
+                        </div>
+                        <p class="card-category">Certification & Skills</p>
+                        <h3 class="card-title FinanceSmall">10 <small> Cert.</small></h3>
+                     </div>
+                     <div class="card-chart cardFinance">
+                        <div class="card-header ~card-header-success" style=" background-color: none;">
+                           <app-total-assets></app-total-assets>
+                           <!-- <app-certification-skills-graph></app-certification-skills-graph> -->
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-lg-8 col-md-12 col-sm-12">
+                  <div class="card card-stats">
+                     <div class="card-header card-header-danger card-header-icon">
+                        <div class="card-icon"> <i class="material-icons">devices_other</i>
+                        </div>
+                        <p class="card-category">Intelligent Operations</p>
+                        <h3 class="card-title FinanceSmall">10</h3>
+                     </div>
+                     <div class="card-footer">
+                        <div class="card-header">
+                           <div class="row">
+                              <table width="100%" border="0" align="center" cellpadding="10" cellspacing="0" class="J2IOOption">
+                                 <tbody>
+                                    <tr>
+                                     <div class="whytitle"> <td align="left" valign="top" scope="row" class="Intelligentwrap">
+                                          <div class=''>WHY</div>
+                                          <div class=''>WHAY</div>
+                                          <div class=''>HOW</div>
+										 </td></div>
+                                       <td align="left" valign="top" scope="row">
+                                          <table border="1" cellspacing="0" cellpadding="2"  class="tblone tblonealpha">
+                                             <tbody>
+                                                <tr>
+                                                   <th class="tdh5"><i class="material-icons">web_asset</i> Asset production</th>
+                                                </tr>
+                                                <tr>
+                                                   <td class="tblonesub">FOUNDATION <small>Stable Operations</small></td>
+                                                </tr>
+                                                <tr>
+                                                   <td>- No client noise</td>
+                                                </tr>
+                                                <tr>
+                                                   <td>- Contractual commitments met</td>
+                                                </tr>
+                                                <tr>
+                                                   <td>- Financial CTD targets met</td>
+                                                </tr>
+                                                <tr>
+                                                   <td>- No major ASOC incidents reported</td>
+                                                </tr>
+                                             </tbody>
+                                          </table>
+                                       </td>
+                                       <td align="center" valign="middle" scope="row"><img src="../../assets/img/uparrow.jpg" width="30" height="30" alt=""/></td>
+                                       <td align="left" valign="top" scope="row">
+                                          <table border="1" cellspacing="0" cellpadding="2"  class="tblone">
+                                             <tbody>
+                                                <tr>
+                                                   <th class="tdh5"><i class="material-icons">memory</i> Channel Integration</th>
+                                                </tr>
+                                                <tr>
+                                                   <td class="tblonesub">AUTOMATED <small>Efficient operations</small></td>
+                                                </tr>
+                                                <tr>
+                                                   <td>- Solution Productivity met</td>
+                                                </tr>
+                                                <tr>
+                                                   <td>- Benchmark productivity met.</td>
+                                                </tr>
+                                                <tr>
+                                                   <td>- Automations, Workflows tools</td>
+                                                </tr>
+                                                <tr>
+                                                   <td>- Basic analytics</td>
+                                                </tr>
+                                                <tr>
+                                                   <td>- Disruptors</td>
+                                                </tr>
+                                             </tbody>
+                                          </table>
+                                       </td>
+                                       <td align="center" valign="middle" scope="row"><img src="../../assets/img/uparrow.jpg" width="30" height="30" alt=""/></td>
+                                       <td align="left" valign="top" scope="row">
+                                          <table border="1" cellspacing="0" cellpadding="2"  class="tblone tblonealpha">
+                                             <tbody>
+                                                <tr>
+                                                   <th class="tdh5"><i class="material-icons">highlight</i> Personalization</th>
+                                                </tr>
+                                                <tr>
+                                                   <td class="tblonesub">INSIGHTS DRIVEN <small>Optimized operations</small> </td>
+                                                </tr>
+                                                <tr>
+                                                   <td>- Analytical insights to drive BOI</td>
+                                                </tr>
+                                                <tr>
+                                                   <td>-Consistent BOI improvement</td>
+                                                </tr>
+                                                <tr>
+                                                   <td>- Agile workforce </td>
+                                                </tr>
+                                             </tbody>
+                                          </table>
+                                       </td>
+                                       <td align="center" valign="middle" scope="row"><img src="../../assets/img/uparrow.jpg" width="30" height="30" alt=""/></td>
+                                       <td align="left" valign="top" scope="row">
+                                          <table border="1" cellspacing="0" cellpadding="2"  class="tblone tblonealpha">
+                                             <tbody>
+                                                <tr>
+                                                   <th class="tdh5"><i class="material-icons">ac_unit</i>  Predictive Data Driven </th>
+                                                </tr>
+                                                <tr>
+                                                   <td class="tblonesub">INTELLIGENT <small>Predictive & Future ready operations</small> </td>
+                                                </tr>
+                                                <tr>
+                                                   <td>- Optimized analytics </td>
+                                                </tr>
+                                                <tr>
+                                                   <td>- Artificial intelligence</td>
+                                                </tr>
+                                                <tr>
+                                                   <td>- e2e transformation</td>
+                                                </tr>
+                                                <tr>
+                                                   <td>- Top quartile performance on BOI’s</td>
+                                                </tr>
+                                                <tr>
+                                                   <td>Talent Mix</td>
+                                                </tr>
+                                             </tbody>
+                                          </table>
+                                       </td>
+                                    </tr>
+                                 </tbody>
+                              </table>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="row h3FontType">
+         <div class="col-lg-6 col-md-12">
+            <div class="card card-stats EmployeesStatsboxBg">
+               <div class="card-header card-header-warning card-header-icon customIconBg">
+                  <div class="dealPerfrom">
+                     <span style="float: left; margin: 0; padding:0;"><i class="material-icons">trending_up</i></span>
+                     <h3 class="card-title" style="display: flex; line-height: 49px;">Deal performance </h3>
+                  </div>
+                  <p class="card-category dealPerfromList">
+                     <select class="form-control">
+                        <option value="">Current Month</option>
+                        <option value="">YTD</option>
+                        <option value="">CTD</option>
+                     </select>
+                  </p>
+               </div>
+               <div class="card-body table-responsive">
+                  <div class="row">
+                     <div class="col-lg-7 col-md-7">
+                        <div style=" text-align: center">
+                           <app-deal-performance></app-deal-performance>
+                        </div>
+                     </div>
+                     <div class="col-lg-2 col-md-2">
+                        <p class="card-category p-2" style=" text-align: center;">Issues Bifurcation 
+                            
+                        </p> <app-issue-breakdown></app-issue-breakdown>
+                     </div>
+                     <div class="col-lg-3 col-md-12">
+                        <div class="d-flex flex-column" id="float-container" >
+                           <div class="p-2">
+                              <p>
+                                 <i class="material-icons" style="border-radius:50%; font-size: 36px; color:#42a7ec ; float: left;">rate_review</i>	
+                                 <span class="card-category"  >Requests managed<small>16014</small></span>
+                              </p>
+                           </div>
+                           <div class="p-2">
+                              <p>
+                                 <i class="material-icons" style="border-radius:50%; font-size: 36px; color:#ffb600 ; float: left;">emoji_events</i>	
+                                 <span class="card-category">Appreciations<br><small>94</small></span>	
+                              </p>
+                           </div>
+                           <div class="p-2">
+                              <p>
+                                 <i class="material-icons" style="border-radius:50%; font-size: 36px; color: #ff6c8b; float: left;">new_releases</i>
+                                 <span class="card-category">Issues Raised<br><small>92</small></span>
+                              </p>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="col-lg-6 col-md-12">
+            <div class="card card-stats EmployeesStatsboxBg">
+               <div class="card-header card-header-warning card-header-icon customIconBg">
+                  <div class="dealPerfrom">
+                     <span style="float: left; margin: 0; padding:0;"><i class="material-icons">how_to_reg</i> </span>
+                     <h3 class="card-title" style="display: flex; line-height: 49px;">Contractual</h3>
+                  </div>
+               </div>
+               <div class="card-body table-responsive">
+                  <div class="tab-pane" id="messages">
+                     <div class="card-body table-responsive contactus">
+                        <div class="row" style="padding-left: 10px; text-align: left;">
+                           <div class="col-lg-4 col-md-4 col-sm-4 card-title">OM ID<small>7683</small>
+                           </div>
+                           <div class="col-lg-4 col-md-4 col-sm-4 card-title">OG *<small>Communications,</small>
+                           </div>
+                           <div class="col-lg-4 col-md-4 col-sm-4 card-title">Contract Region <small>India</small>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="card-body table-responsive contactus">
+                        <div class="row" style="padding-left: 10px; text-align: left;">
+                           <div class="col-lg-4 col-md-4 col-sm-4 card-title">Contract / Billing type<small>Select</small>
+                           </div>
+                           <div class="col-lg-4 col-md-4 col-sm-4 card-title">Capability <small>Marketing</small>
+                           </div>
+                           <div class="col-lg-4 col-md-4 col-sm-4 card-title">Entity<small>Select</small>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="card-body table-responsive contactus">
+                        <div class="row" style="padding-left: 10px; text-align: left;">
+                           <div class="col-lg-4 col-md-4 col-sm-4 card-title">Tower <small>Content Management</small>
+                           </div>
+                           <div class="col-lg-4 col-md-4 col-sm-4 card-title">Reporting Area <small>Mumbai</small>
+                           </div>
+                           <div class="col-lg-4 col-md-4 col-sm-4 card-title">Delivery Region<small>India</small>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="card-body table-responsive contactus">
+                        <div class="row" style="padding-left: 10px; text-align: left;">
+                           <div class="col-lg-4 col-md-4 col-sm-4 card-title">Location <small>Mumbai</small>
+                           </div>
+                           <div class="col-lg-4 col-md-4 col-sm-4 card-title">Diamond Client<small>Yes</small>
+                           </div>
+                           <div class="col-lg-4 col-md-4 col-sm-4 card-title">RBE<small>AIO</small>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="card-body table-responsive contactus">
+                        <div class="row" style="padding-left: 10px; text-align: left;">
+                           <div class="col-lg-4 col-md-4 col-sm-4 card-title">Public Referencability <small>Controlled/ Reference Calls</small>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div> 
+   </div>
+</div>
+<!-- ----------- footer -----------  -->
+<footer>
+   <div class="container-fluid p-0" style=" position: fixed; bottom: 0; z-index: 999">
+      <div class="panel-group" id="accordion">
+         <div class="panel panel-default">
+            <div class="panel-heading">
+               <p class="panel-title m-0">
+                  <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" class="switchCopy">
+                  <i class="material-icons">contact_phone</i>  Contact
+                  </a>
+               </p>
+            </div>
+            <div id="collapseOne" class="panel-collapse collapse col-lg-12 col-md-12 col-sm-12">
+               <div class="panel-body">
+                  <div class="card-body table-responsive">
+                     <div class="card-body table-responsive ">
+                        <div class="col-sm-12 mb-12 row footContact">
+                           <div class="col-lg-3 col-md-3 col-sm-3 card-title"><strong>AMT Lead </strong><label>Sameer.sekhon</label></div>
+                           <div class="col-lg-3 col-md-3 col-sm-3 card-title"><strong>SDO Maturity Champion </strong><label>Sameer.sekhon</label></div>
+                           <div class="col-lg-3 col-md-3 col-sm-3 card-title"><strong>OG Lead </strong><label>sonal.h.mehra</label></div>
+                           <div class="col-lg-3 col-md-3 col-sm-3 card-title"><strong>SDL </strong><label>arnold.miranda</label></div>
+                        </div>
+                     </div>
+                     <div class="card-body table-responsive ">
+                        <div class="col-sm-12 mb-12 row footContact">
+                           <div class="col-lg-3 col-md-3 col-sm-3 card-title"><strong>Cluster lead </strong><label>sonal.h.mehra</label></div>
+                           <div class="col-lg-3 col-md-3 col-sm-3 card-title"><strong>MD Responsible </strong><label>sonal.h.mehra</label></div>
+                           <div class="col-lg-3 col-md-3 col-sm-3 card-title"><strong>CFM</strong><label>shilpa.s.kamble</label></div>
+                           <div class="col-lg-3 col-md-3 col-sm-3 card-title"><strong>Account Lead</strong><label>shilpa.s.kamble</label></div>
+                        </div>
+                     </div>
+                     <div class="card-body table-responsive ">
+                        <div class="col-sm-12 mb-12 row footContact">
+                           <div class="col-lg-3 col-md-3 col-sm-3 card-title"><strong>CAL's</strong><label>shilpa.s.kamble</label></div>
+                           <div class="col-lg-3 col-md-3 col-sm-3 card-title"><strong>Solution Architect id</strong><label>shilpa.s.kamble</label></div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</footer> 
+<!-- ----------- footer ----------- -->
+<script>
+//toggle footer
+$("#collapseOne").on("show.bs.collapse", function() {
+$("html, body").animate({ scrollTop: 999999 }, "slow");
+});
+
+//switch between open and close when footer or contact nav is clicked
+
+$('.primary-link').click(function(){
+$('.switchCopy').text($('.switchCopy').text() == 'close' ? 'open' : 'close');
+});
+
+$('.switchCopy').click(function(){
+$(this).text($(this).text() == 'close' ? 'open' : 'close');
+});
+
+</script>
