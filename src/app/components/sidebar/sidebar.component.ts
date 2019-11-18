@@ -20,7 +20,7 @@ export const ROUTES: RouteInfo[] = [
     { path: '/Internaltool', title: 'Internaltool',  icon:'account_tree', class: '' },
     { path: '/modules', title: 'Modules',  icon:'widgets', class: '' },
     { path: '/report', title: 'Reports',  icon:'event_note', class: '' },
-    { path: '/we-at-accenture', title: 'We @ Accenture',  icon:'highlight', class: '' },
+    { path: '/we-at', title: 'We @ Accenture',  icon:'highlight', class: '' },
 ];
 
 @Component({

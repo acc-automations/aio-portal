@@ -2,8 +2,13 @@
 	{
 		"week": "1",
 		"year": "2019",
-		"data": {
-			"_id": "3rt34343t564564f",    
+		"data": [{			
+			"region": "India",
+			"location": "Mumbai",
+			"capability": "Marketing",
+			"master_client_name": "SPRINT",
+			"process": "Visual Designing",
+			"hc":20,
 			"ideas_submited_count" : 21,
 			"ipp" : 2,
 			"implementation_rate" : 5,
@@ -12,13 +17,51 @@
 			"ideas_redflagged_7days" : 4,
 			"ideas_redflagged_30days" : 7,
 			"red_flagged_ideas" : 7
+		},
+		{			
+			"region": "India",
+			"location": "Chennai",
+			"capability": "Marketing",
+			"master_client_name": "MICROSOFT CORPORATION",
+			"process": "Content & Events",
+			"hc":75,
+			"ideas_submited_count" : 56,
+			"ipp" : 1,
+			"implementation_rate" : 4,
+			"ontime_implementation_rate" : 2,
+			"validation_rate" : 8,
+			"ideas_redflagged_7days" : 10,
+			"ideas_redflagged_30days" : 43,
+			"red_flagged_ideas" : 9
+		},
+		{			
+			"region": "India",
+			"location": "Delhi",
+			"capability": "Marketing",
+			"master_client_name": "SPRINT",
+			"process": "Visual Designing",
+			"hc":35,
+			"ideas_submited_count" : 12,
+			"ipp" : 2,
+			"implementation_rate" : 4,
+			"ontime_implementation_rate" : 2,
+			"validation_rate" : 8,
+			"ideas_redflagged_7days" : 10,
+			"ideas_redflagged_30days" : 43,
+			"red_flagged_ideas" : 9
 		}
+	]
 	},
 	{
 		"week": "2",
 		"year": "2019",
-		"data": {
-			"_id": "3rt34343t564564f",    
+		"data": [{			
+			"region": "India",
+			"location": "Mumbai",
+			"capability": "Marketing",
+			"master_client_name": "SPRINT",
+			"process": "Visual Designing",
+			"hc":20,
 			"ideas_submited_count" : 21,
 			"ipp" : 2,
 			"implementation_rate" : 5,
@@ -27,13 +70,51 @@
 			"ideas_redflagged_7days" : 4,
 			"ideas_redflagged_30days" : 7,
 			"red_flagged_ideas" : 7
+		},
+		{			
+			"region": "India",
+			"location": "Chennai",
+			"capability": "Marketing",
+			"master_client_name": "MICROSOFT CORPORATION",
+			"process": "Content & Events",
+			"hc":75,
+			"ideas_submited_count" : 56,
+			"ipp" : 1,
+			"implementation_rate" : 4,
+			"ontime_implementation_rate" : 2,
+			"validation_rate" : 8,
+			"ideas_redflagged_7days" : 10,
+			"ideas_redflagged_30days" : 43,
+			"red_flagged_ideas" : 9
+		},
+		{			
+			"region": "India",
+			"location": "Delhi",
+			"capability": "Marketing",
+			"master_client_name": "SPRINT",
+			"process": "Visual Designing",
+			"hc":35,
+			"ideas_submited_count" : 12,
+			"ipp" : 2,
+			"implementation_rate" : 4,
+			"ontime_implementation_rate" : 2,
+			"validation_rate" : 8,
+			"ideas_redflagged_7days" : 10,
+			"ideas_redflagged_30days" : 43,
+			"red_flagged_ideas" : 9
 		}
+	]
 	},
 	{
 		"week": "3",
 		"year": "2019",
-		"data": {
-			"_id": "3rt34343t564564f",    
+		"data": [{			
+			"region": "India",
+			"location": "Mumbai",
+			"capability": "Marketing",
+			"master_client_name": "SPRINT",
+			"process": "Visual Designing",
+			"hc":20,
 			"ideas_submited_count" : 21,
 			"ipp" : 2,
 			"implementation_rate" : 5,
@@ -42,14 +123,51 @@
 			"ideas_redflagged_7days" : 4,
 			"ideas_redflagged_30days" : 7,
 			"red_flagged_ideas" : 7
-
+		},
+		{			
+			"region": "India",
+			"location": "Chennai",
+			"capability": "Marketing",
+			"master_client_name": "MICROSOFT CORPORATION",
+			"process": "Content & Events",
+			"hc":75,
+			"ideas_submited_count" : 56,
+			"ipp" : 1,
+			"implementation_rate" : 4,
+			"ontime_implementation_rate" : 2,
+			"validation_rate" : 8,
+			"ideas_redflagged_7days" : 10,
+			"ideas_redflagged_30days" : 43,
+			"red_flagged_ideas" : 9
+		},
+		{			
+			"region": "India",
+			"location": "Delhi",
+			"capability": "Marketing",
+			"master_client_name": "SPRINT",
+			"process": "Visual Designing",
+			"hc":35,
+			"ideas_submited_count" : 12,
+			"ipp" : 2,
+			"implementation_rate" : 4,
+			"ontime_implementation_rate" : 2,
+			"validation_rate" : 8,
+			"ideas_redflagged_7days" : 10,
+			"ideas_redflagged_30days" : 43,
+			"red_flagged_ideas" : 9
 		}
+	]
 	},
 	{
 		"week": "4",
 		"year": "2019",
-		"data": {
-			"_id": "3rt34343t564564f",    
+		"data": [{			
+			"region": "India",
+			"location": "Mumbai",
+			"capability": "Marketing",
+			"master_client_name": "SPRINT",
+			"process": "Visual Designing",
+			"hc":20,
 			"ideas_submited_count" : 21,
 			"ipp" : 2,
 			"implementation_rate" : 5,
@@ -58,14 +176,51 @@
 			"ideas_redflagged_7days" : 4,
 			"ideas_redflagged_30days" : 7,
 			"red_flagged_ideas" : 7
-
+		},
+		{			
+			"region": "India",
+			"location": "Chennai",
+			"capability": "Marketing",
+			"master_client_name": "MICROSOFT CORPORATION",
+			"process": "Content & Events",
+			"hc":75,
+			"ideas_submited_count" : 56,
+			"ipp" : 1,
+			"implementation_rate" : 4,
+			"ontime_implementation_rate" : 2,
+			"validation_rate" : 8,
+			"ideas_redflagged_7days" : 10,
+			"ideas_redflagged_30days" : 43,
+			"red_flagged_ideas" : 9
+		},
+		{			
+			"region": "India",
+			"location": "Delhi",
+			"capability": "Marketing",
+			"master_client_name": "SPRINT",
+			"process": "Visual Designing",
+			"hc":35,
+			"ideas_submited_count" : 12,
+			"ipp" : 2,
+			"implementation_rate" : 4,
+			"ontime_implementation_rate" : 2,
+			"validation_rate" : 8,
+			"ideas_redflagged_7days" : 10,
+			"ideas_redflagged_30days" : 43,
+			"red_flagged_ideas" : 9
 		}
+	]
 	},
 	{
 		"week": "5",
 		"year": "2019",
-		"data": {
-			"_id": "3rt34343t564564f",    
+		"data": [{			
+			"region": "India",
+			"location": "Mumbai",
+			"capability": "Marketing",
+			"master_client_name": "SPRINT",
+			"process": "Visual Designing",
+			"hc":20,
 			"ideas_submited_count" : 21,
 			"ipp" : 2,
 			"implementation_rate" : 5,
@@ -74,14 +229,51 @@
 			"ideas_redflagged_7days" : 4,
 			"ideas_redflagged_30days" : 7,
 			"red_flagged_ideas" : 7
-
+		},
+		{			
+			"region": "India",
+			"location": "Chennai",
+			"capability": "Marketing",
+			"master_client_name": "MICROSOFT CORPORATION",
+			"process": "Content & Events",
+			"hc":75,
+			"ideas_submited_count" : 56,
+			"ipp" : 1,
+			"implementation_rate" : 4,
+			"ontime_implementation_rate" : 2,
+			"validation_rate" : 8,
+			"ideas_redflagged_7days" : 10,
+			"ideas_redflagged_30days" : 43,
+			"red_flagged_ideas" : 9
+		},
+		{			
+			"region": "India",
+			"location": "Delhi",
+			"capability": "Marketing",
+			"master_client_name": "SPRINT",
+			"process": "Visual Designing",
+			"hc":35,
+			"ideas_submited_count" : 12,
+			"ipp" : 2,
+			"implementation_rate" : 4,
+			"ontime_implementation_rate" : 2,
+			"validation_rate" : 8,
+			"ideas_redflagged_7days" : 10,
+			"ideas_redflagged_30days" : 43,
+			"red_flagged_ideas" : 9
 		}
+	]
 	},
 	{
 		"week": "6",
 		"year": "2019",
-		"data": {
-			"_id": "3rt34343t564564f",    
+		"data": [{			
+			"region": "India",
+			"location": "Mumbai",
+			"capability": "Marketing",
+			"master_client_name": "SPRINT",
+			"process": "Visual Designing",
+			"hc":20,
 			"ideas_submited_count" : 21,
 			"ipp" : 2,
 			"implementation_rate" : 5,
@@ -90,14 +282,51 @@
 			"ideas_redflagged_7days" : 4,
 			"ideas_redflagged_30days" : 7,
 			"red_flagged_ideas" : 7
-
+		},
+		{			
+			"region": "India",
+			"location": "Chennai",
+			"capability": "Marketing",
+			"master_client_name": "MICROSOFT CORPORATION",
+			"process": "Content & Events",
+			"hc":75,
+			"ideas_submited_count" : 56,
+			"ipp" : 1,
+			"implementation_rate" : 4,
+			"ontime_implementation_rate" : 2,
+			"validation_rate" : 8,
+			"ideas_redflagged_7days" : 10,
+			"ideas_redflagged_30days" : 43,
+			"red_flagged_ideas" : 9
+		},
+		{			
+			"region": "India",
+			"location": "Delhi",
+			"capability": "Marketing",
+			"master_client_name": "SPRINT",
+			"process": "Visual Designing",
+			"hc":35,
+			"ideas_submited_count" : 12,
+			"ipp" : 2,
+			"implementation_rate" : 4,
+			"ontime_implementation_rate" : 2,
+			"validation_rate" : 8,
+			"ideas_redflagged_7days" : 10,
+			"ideas_redflagged_30days" : 43,
+			"red_flagged_ideas" : 9
 		}
+	]
 	},
 	{
 		"week": "7",
 		"year": "2019",
-		"data": {
-			"_id": "3rt34343t564564f",    
+		"data": [{			
+			"region": "India",
+			"location": "Mumbai",
+			"capability": "Marketing",
+			"master_client_name": "SPRINT",
+			"process": "Visual Designing",
+			"hc":20,
 			"ideas_submited_count" : 21,
 			"ipp" : 2,
 			"implementation_rate" : 5,
@@ -106,14 +335,51 @@
 			"ideas_redflagged_7days" : 4,
 			"ideas_redflagged_30days" : 7,
 			"red_flagged_ideas" : 7
-
+		},
+		{			
+			"region": "India",
+			"location": "Chennai",
+			"capability": "Marketing",
+			"master_client_name": "MICROSOFT CORPORATION",
+			"process": "Content & Events",
+			"hc":75,
+			"ideas_submited_count" : 56,
+			"ipp" : 1,
+			"implementation_rate" : 4,
+			"ontime_implementation_rate" : 2,
+			"validation_rate" : 8,
+			"ideas_redflagged_7days" : 10,
+			"ideas_redflagged_30days" : 43,
+			"red_flagged_ideas" : 9
+		},
+		{			
+			"region": "India",
+			"location": "Delhi",
+			"capability": "Marketing",
+			"master_client_name": "SPRINT",
+			"process": "Visual Designing",
+			"hc":35,
+			"ideas_submited_count" : 12,
+			"ipp" : 2,
+			"implementation_rate" : 4,
+			"ontime_implementation_rate" : 2,
+			"validation_rate" : 8,
+			"ideas_redflagged_7days" : 10,
+			"ideas_redflagged_30days" : 43,
+			"red_flagged_ideas" : 9
 		}
+	]
 	},
 	{
 		"week": "8",
 		"year": "2019",
-		"data": {
-			"_id": "3rt34343t564564f",    
+		"data": [{			
+			"region": "India",
+			"location": "Mumbai",
+			"capability": "Marketing",
+			"master_client_name": "SPRINT",
+			"process": "Visual Designing",
+			"hc":20,
 			"ideas_submited_count" : 21,
 			"ipp" : 2,
 			"implementation_rate" : 5,
@@ -122,14 +388,51 @@
 			"ideas_redflagged_7days" : 4,
 			"ideas_redflagged_30days" : 7,
 			"red_flagged_ideas" : 7
-
+		},
+		{			
+			"region": "India",
+			"location": "Chennai",
+			"capability": "Marketing",
+			"master_client_name": "MICROSOFT CORPORATION",
+			"process": "Content & Events",
+			"hc":75,
+			"ideas_submited_count" : 56,
+			"ipp" : 1,
+			"implementation_rate" : 4,
+			"ontime_implementation_rate" : 2,
+			"validation_rate" : 8,
+			"ideas_redflagged_7days" : 10,
+			"ideas_redflagged_30days" : 43,
+			"red_flagged_ideas" : 9
+		},
+		{			
+			"region": "India",
+			"location": "Delhi",
+			"capability": "Marketing",
+			"master_client_name": "SPRINT",
+			"process": "Visual Designing",
+			"hc":35,
+			"ideas_submited_count" : 12,
+			"ipp" : 2,
+			"implementation_rate" : 4,
+			"ontime_implementation_rate" : 2,
+			"validation_rate" : 8,
+			"ideas_redflagged_7days" : 10,
+			"ideas_redflagged_30days" : 43,
+			"red_flagged_ideas" : 9
 		}
+	]
 	},
 	{
 		"week": "9",
 		"year": "2019",
-		"data": {
-			"_id": "3rt34343t564564f",    
+		"data": [{			
+			"region": "India",
+			"location": "Mumbai",
+			"capability": "Marketing",
+			"master_client_name": "SPRINT",
+			"process": "Visual Designing",
+			"hc":20,
 			"ideas_submited_count" : 21,
 			"ipp" : 2,
 			"implementation_rate" : 5,
@@ -138,14 +441,51 @@
 			"ideas_redflagged_7days" : 4,
 			"ideas_redflagged_30days" : 7,
 			"red_flagged_ideas" : 7
-
+		},
+		{			
+			"region": "India",
+			"location": "Chennai",
+			"capability": "Marketing",
+			"master_client_name": "MICROSOFT CORPORATION",
+			"process": "Content & Events",
+			"hc":75,
+			"ideas_submited_count" : 56,
+			"ipp" : 1,
+			"implementation_rate" : 4,
+			"ontime_implementation_rate" : 2,
+			"validation_rate" : 8,
+			"ideas_redflagged_7days" : 10,
+			"ideas_redflagged_30days" : 43,
+			"red_flagged_ideas" : 9
+		},
+		{			
+			"region": "India",
+			"location": "Delhi",
+			"capability": "Marketing",
+			"master_client_name": "SPRINT",
+			"process": "Visual Designing",
+			"hc":35,
+			"ideas_submited_count" : 12,
+			"ipp" : 2,
+			"implementation_rate" : 4,
+			"ontime_implementation_rate" : 2,
+			"validation_rate" : 8,
+			"ideas_redflagged_7days" : 10,
+			"ideas_redflagged_30days" : 43,
+			"red_flagged_ideas" : 9
 		}
+	]
 	},
 	{
 		"week": "10",
 		"year": "2019",
-		"data": {
-			"_id": "3rt34343t564564f",    
+		"data": [{			
+			"region": "India",
+			"location": "Mumbai",
+			"capability": "Marketing",
+			"master_client_name": "SPRINT",
+			"process": "Visual Designing",
+			"hc":20,
 			"ideas_submited_count" : 21,
 			"ipp" : 2,
 			"implementation_rate" : 5,
@@ -154,14 +494,51 @@
 			"ideas_redflagged_7days" : 4,
 			"ideas_redflagged_30days" : 7,
 			"red_flagged_ideas" : 7
-
+		},
+		{			
+			"region": "India",
+			"location": "Chennai",
+			"capability": "Marketing",
+			"master_client_name": "MICROSOFT CORPORATION",
+			"process": "Content & Events",
+			"hc":75,
+			"ideas_submited_count" : 56,
+			"ipp" : 1,
+			"implementation_rate" : 4,
+			"ontime_implementation_rate" : 2,
+			"validation_rate" : 8,
+			"ideas_redflagged_7days" : 10,
+			"ideas_redflagged_30days" : 43,
+			"red_flagged_ideas" : 9
+		},
+		{			
+			"region": "India",
+			"location": "Delhi",
+			"capability": "Marketing",
+			"master_client_name": "SPRINT",
+			"process": "Visual Designing",
+			"hc":35,
+			"ideas_submited_count" : 12,
+			"ipp" : 2,
+			"implementation_rate" : 4,
+			"ontime_implementation_rate" : 2,
+			"validation_rate" : 8,
+			"ideas_redflagged_7days" : 10,
+			"ideas_redflagged_30days" : 43,
+			"red_flagged_ideas" : 9
 		}
+	]
 	},
 	{
 		"week": "11",
 		"year": "2019",
-		"data": {
-			"_id": "3rt34343t564564f",    
+		"data": [{			
+			"region": "India",
+			"location": "Mumbai",
+			"capability": "Marketing",
+			"master_client_name": "SPRINT",
+			"process": "Visual Designing",
+			"hc":20,
 			"ideas_submited_count" : 21,
 			"ipp" : 2,
 			"implementation_rate" : 5,
@@ -170,14 +547,51 @@
 			"ideas_redflagged_7days" : 4,
 			"ideas_redflagged_30days" : 7,
 			"red_flagged_ideas" : 7
-
+		},
+		{			
+			"region": "India",
+			"location": "Chennai",
+			"capability": "Marketing",
+			"master_client_name": "MICROSOFT CORPORATION",
+			"process": "Content & Events",
+			"hc":75,
+			"ideas_submited_count" : 56,
+			"ipp" : 1,
+			"implementation_rate" : 4,
+			"ontime_implementation_rate" : 2,
+			"validation_rate" : 8,
+			"ideas_redflagged_7days" : 10,
+			"ideas_redflagged_30days" : 43,
+			"red_flagged_ideas" : 9
+		},
+		{			
+			"region": "India",
+			"location": "Delhi",
+			"capability": "Marketing",
+			"master_client_name": "SPRINT",
+			"process": "Visual Designing",
+			"hc":35,
+			"ideas_submited_count" : 12,
+			"ipp" : 2,
+			"implementation_rate" : 4,
+			"ontime_implementation_rate" : 2,
+			"validation_rate" : 8,
+			"ideas_redflagged_7days" : 10,
+			"ideas_redflagged_30days" : 43,
+			"red_flagged_ideas" : 9
 		}
+	]
 	},
 	{
 		"week": "12",
 		"year": "2019",
-		"data": {
-			"_id": "3rt34343t564564f",    
+		"data": [{			
+			"region": "India",
+			"location": "Mumbai",
+			"capability": "Marketing",
+			"master_client_name": "SPRINT",
+			"process": "Visual Designing",
+			"hc":20,
 			"ideas_submited_count" : 21,
 			"ipp" : 2,
 			"implementation_rate" : 5,
@@ -186,14 +600,51 @@
 			"ideas_redflagged_7days" : 4,
 			"ideas_redflagged_30days" : 7,
 			"red_flagged_ideas" : 7
-
+		},
+		{			
+			"region": "India",
+			"location": "Chennai",
+			"capability": "Marketing",
+			"master_client_name": "MICROSOFT CORPORATION",
+			"process": "Content & Events",
+			"hc":75,
+			"ideas_submited_count" : 56,
+			"ipp" : 1,
+			"implementation_rate" : 4,
+			"ontime_implementation_rate" : 2,
+			"validation_rate" : 8,
+			"ideas_redflagged_7days" : 10,
+			"ideas_redflagged_30days" : 43,
+			"red_flagged_ideas" : 9
+		},
+		{			
+			"region": "India",
+			"location": "Delhi",
+			"capability": "Marketing",
+			"master_client_name": "SPRINT",
+			"process": "Visual Designing",
+			"hc":35,
+			"ideas_submited_count" : 12,
+			"ipp" : 2,
+			"implementation_rate" : 4,
+			"ontime_implementation_rate" : 2,
+			"validation_rate" : 8,
+			"ideas_redflagged_7days" : 10,
+			"ideas_redflagged_30days" : 43,
+			"red_flagged_ideas" : 9
 		}
+	]
 	},
 	{
 		"week": "13",
 		"year": "2019",
-		"data": {
-			"_id": "3rt34343t564564f",    
+		"data": [{			
+			"region": "India",
+			"location": "Mumbai",
+			"capability": "Marketing",
+			"master_client_name": "SPRINT",
+			"process": "Visual Designing",
+			"hc":20,
 			"ideas_submited_count" : 21,
 			"ipp" : 2,
 			"implementation_rate" : 5,
@@ -202,14 +653,51 @@
 			"ideas_redflagged_7days" : 4,
 			"ideas_redflagged_30days" : 7,
 			"red_flagged_ideas" : 7
-
+		},
+		{			
+			"region": "India",
+			"location": "Chennai",
+			"capability": "Marketing",
+			"master_client_name": "MICROSOFT CORPORATION",
+			"process": "Content & Events",
+			"hc":75,
+			"ideas_submited_count" : 56,
+			"ipp" : 1,
+			"implementation_rate" : 4,
+			"ontime_implementation_rate" : 2,
+			"validation_rate" : 8,
+			"ideas_redflagged_7days" : 10,
+			"ideas_redflagged_30days" : 43,
+			"red_flagged_ideas" : 9
+		},
+		{			
+			"region": "India",
+			"location": "Delhi",
+			"capability": "Marketing",
+			"master_client_name": "SPRINT",
+			"process": "Visual Designing",
+			"hc":35,
+			"ideas_submited_count" : 12,
+			"ipp" : 2,
+			"implementation_rate" : 4,
+			"ontime_implementation_rate" : 2,
+			"validation_rate" : 8,
+			"ideas_redflagged_7days" : 10,
+			"ideas_redflagged_30days" : 43,
+			"red_flagged_ideas" : 9
 		}
+	]
 	},
 	{
 		"week": "14",
 		"year": "2019",
-		"data": {
-			"_id": "3rt34343t564564f",    
+		"data": [{			
+			"region": "India",
+			"location": "Mumbai",
+			"capability": "Marketing",
+			"master_client_name": "SPRINT",
+			"process": "Visual Designing",
+			"hc":20,
 			"ideas_submited_count" : 21,
 			"ipp" : 2,
 			"implementation_rate" : 5,
@@ -218,14 +706,51 @@
 			"ideas_redflagged_7days" : 4,
 			"ideas_redflagged_30days" : 7,
 			"red_flagged_ideas" : 7
-
+		},
+		{			
+			"region": "India",
+			"location": "Chennai",
+			"capability": "Marketing",
+			"master_client_name": "MICROSOFT CORPORATION",
+			"process": "Content & Events",
+			"hc":75,
+			"ideas_submited_count" : 56,
+			"ipp" : 1,
+			"implementation_rate" : 4,
+			"ontime_implementation_rate" : 2,
+			"validation_rate" : 8,
+			"ideas_redflagged_7days" : 10,
+			"ideas_redflagged_30days" : 43,
+			"red_flagged_ideas" : 9
+		},
+		{			
+			"region": "India",
+			"location": "Delhi",
+			"capability": "Marketing",
+			"master_client_name": "SPRINT",
+			"process": "Visual Designing",
+			"hc":35,
+			"ideas_submited_count" : 12,
+			"ipp" : 2,
+			"implementation_rate" : 4,
+			"ontime_implementation_rate" : 2,
+			"validation_rate" : 8,
+			"ideas_redflagged_7days" : 10,
+			"ideas_redflagged_30days" : 43,
+			"red_flagged_ideas" : 9
 		}
+	]
 	},
 	{
 		"week": "15",
 		"year": "2019",
-		"data": {
-			"_id": "3rt34343t564564f",    
+		"data": [{			
+			"region": "India",
+			"location": "Mumbai",
+			"capability": "Marketing",
+			"master_client_name": "SPRINT",
+			"process": "Visual Designing",
+			"hc":20,
 			"ideas_submited_count" : 21,
 			"ipp" : 2,
 			"implementation_rate" : 5,
@@ -234,7 +759,39 @@
 			"ideas_redflagged_7days" : 4,
 			"ideas_redflagged_30days" : 7,
 			"red_flagged_ideas" : 7
-
+		},
+		{			
+			"region": "India",
+			"location": "Chennai",
+			"capability": "Marketing",
+			"master_client_name": "MICROSOFT CORPORATION",
+			"process": "Content & Events",
+			"hc":75,
+			"ideas_submited_count" : 56,
+			"ipp" : 1,
+			"implementation_rate" : 4,
+			"ontime_implementation_rate" : 2,
+			"validation_rate" : 8,
+			"ideas_redflagged_7days" : 10,
+			"ideas_redflagged_30days" : 43,
+			"red_flagged_ideas" : 9
+		},
+		{			
+			"region": "India",
+			"location": "Delhi",
+			"capability": "Marketing",
+			"master_client_name": "SPRINT",
+			"process": "Visual Designing",
+			"hc":35,
+			"ideas_submited_count" : 12,
+			"ipp" : 2,
+			"implementation_rate" : 4,
+			"ontime_implementation_rate" : 2,
+			"validation_rate" : 8,
+			"ideas_redflagged_7days" : 10,
+			"ideas_redflagged_30days" : 43,
+			"red_flagged_ideas" : 9
 		}
+	]
 	}
 ]

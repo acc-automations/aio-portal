@@ -20,5 +20,11 @@ export interface WeAt {
     validation_rate : number;
     ideas_redflagged_7days : number;
     ideas_redflagged_30days : number;
+    region: string;
+    location: string;
+    capability: string;
+    master_client_name: string;
+    process: string;
+    hc:number;
   }
   

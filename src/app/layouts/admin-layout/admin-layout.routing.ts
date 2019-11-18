@@ -13,7 +13,7 @@ import { InternaltoolComponent } from 'app/internaltool/internaltool.component';
 import { LeadershipDashboardComponent } from 'app/leadership-dashboard/leadership-dashboard.component';
 import { ModulesComponent } from 'app/modules/modules.component';
 import { ReportComponent } from 'app/report/report.component';
-import { WeAtAccentureComponent } from 'app/we-at-accenture/we-at-accenture.component';
+import { WeAtComponent } from 'app/we-at/we-at.component';
 
 export const AdminLayoutRoutes: Routes = [
     // {
@@ -71,5 +71,5 @@ export const AdminLayoutRoutes: Routes = [
     { path: 'LeadershipDashboard',   component: LeadershipDashboardComponent },
     { path: 'modules',   component: ModulesComponent },
     { path: 'report',   component: ReportComponent },    
-    { path: 'we-at-accenture',   component: WeAtAccentureComponent },        
+    { path: 'we-at',   component: WeAtComponent },        
 ];

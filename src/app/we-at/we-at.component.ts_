@@ -60,7 +60,7 @@ incomingfile(event)
             switch(sheet_name) { 
               case "Idea Aging Raw Data": { 
                 this.upload_resp_ia="Processed "+Json.length+" records!"
-                break; 
+                 break; 
               } 
               case "PerformanceSummaryReport": { 
                 this.upload_resp_pf="Processed "+Json.length+" records!"
@@ -102,14 +102,7 @@ incomingfile(event)
     ontime_implementation_rate : 0,
     validation_rate : 0,
     ideas_redflagged_7days : 0,
-    ideas_redflagged_30days : 0,
-    region: "",
-    location: "",
-    capability: "",
-    master_client_name: "",
-    process: "",
-    hc:0
-
+    ideas_redflagged_30days : 0
   };
 
   public active_deal_name: string = "SPRINT"
@@ -257,7 +250,6 @@ incomingfile(event)
     this.calculatePF();
     this.calculateRF()
     this.calculateIA();
-    
     return this.we_at_current;
   }
 

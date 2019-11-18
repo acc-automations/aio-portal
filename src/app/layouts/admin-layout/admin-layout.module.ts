@@ -25,7 +25,7 @@ import { FusionChartsModule } from "angular-fusioncharts";
 import * as FusionCharts from "fusioncharts";
 import * as Charts from "fusioncharts/fusioncharts.charts";
 import { DxChartModule } from 'devextreme-angular';
-
+import { WeAtComponent } from 'app/we-at/we-at.component';
 import * as FusionTheme from "fusioncharts/themes/fusioncharts.theme.fusion"
 FusionChartsModule.fcRoot(FusionCharts, Charts, FusionTheme);
 
@@ -51,7 +51,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { LeadershipDashboardComponent } from 'app/leadership-dashboard/leadership-dashboard.component';
 import { ModulesComponent } from 'app/modules/modules.component';
 import { ReportComponent } from 'app/report/report.component';
-import { WeAtAccentureComponent } from 'app/we-at-accenture/we-at-accenture.component';
 
 
 
@@ -99,7 +98,7 @@ import { WeAtAccentureComponent } from 'app/we-at-accenture/we-at-accenture.comp
     LeadershipDashboardComponent,
     ModulesComponent,
     ReportComponent,
-    WeAtAccentureComponent 
+    WeAtComponent 
     
     
   ],
