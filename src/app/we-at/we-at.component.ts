@@ -6,6 +6,8 @@ import { WeAt_RF } from '../we-at/we-at-rf-schema';
 import { WeAt_IA } from '../we-at/we-at-ia-schema';
 import * as moment from 'moment';
 import * as XLSX from 'xlsx';
+import { element } from 'protractor';
+import { isEmpty } from 'rxjs-compat/operator/isEmpty';
 
 @Component({
   selector    : 'app-we-at',
@@ -16,79 +18,502 @@ import * as XLSX from 'xlsx';
 
 export class WeAtComponent implements OnInit {
 
-  arrayBuffer:any;
-  file:File;
+  
+  IA_file:File;
+  RF_file:File;
+  PF_file:File;
   upload_resp_ia: string;
   upload_resp_rf: string;
   upload_resp_pf: string;
-incomingfile(event) 
-  {
-  this.file= event.target.files[0]; 
+  //OG_wise_data_pf: any={data:[]};
+  //location_wise_data_pf: any={data:[]};
+  //OG_wise_data_rf: any={data:[]};
+  //location_wise_data_rf: any={data:[]};
+  //OG_wise_data_ia: any={data:[]};
+  //location_wise_data_ia: any={data:[]};
+
+  OG_wise_data_rf = new Object();
+  location_wise_data_rf = new Object();
+  OG_wise_data_ia = new Object();
+  location_wise_data_ia = new Object();
+  OG_wise_data_pf = new Object();
+  location_wise_data_pf = new Object();
+
+  incomingIAfile(event){
+    this.IA_file= event.target.files[0]; 
+  }
+  incomingRFfile(event){
+    this.RF_file= event.target.files[0]; 
+  }
+  incomingPFfile(event){
+    this.PF_file= event.target.files[0]; 
   }
 
- Upload(sheet_name) {
+  Upload(sheet_name) {
+    
+     
+    
+    
+    
+    
 
-  switch(sheet_name) { 
-    case "Idea Aging Raw Data": { 
-      this.upload_resp_ia= "processing...";
-       break; 
-    } 
-    case "PerformanceSummaryReport": { 
-      this.upload_resp_pf= "processing...";
-       break; 
-    } 
-    case "RedFlaggedReport": { 
-      this.upload_resp_rf= "processing...";
-      break; 
-    } 
-    default: { 
-       break; 
-    } 
- } 
-
-  let fileReader = new FileReader();
+    switch (sheet_name) {
+      case "Idea Aging Raw Data": {
+        this.upload_resp_ia = "processing...";
+        
+        let arrayBuffer:any="";
+        let fileReader = new FileReader();
         fileReader.onload = (e) => {
-            this.arrayBuffer = fileReader.result;
-            var data = new Uint8Array(this.arrayBuffer);
-            var arr = new Array();
-            for(var i = 0; i != data.length; ++i) arr[i] = String.fromCharCode(data[i]);
-            var bstr = arr.join("");
-            var workbook = XLSX.read(bstr, {type:"binary"});
-            //var first_sheet_name = workbook.SheetNames[0];
-            var worksheet = workbook.Sheets[sheet_name];
-            let Json = XLSX.utils.sheet_to_json(worksheet,{raw:true});
-            switch(sheet_name) { 
-              case "Idea Aging Raw Data": { 
-                this.upload_resp_ia="Processed "+Json.length+" records!"
-                break; 
-              } 
-              case "PerformanceSummaryReport": { 
-                this.upload_resp_pf="Processed "+Json.length+" records!"
-                 break; 
-              } 
-              case "RedFlaggedReport": { 
-                this.upload_resp_rf="Processed "+Json.length+" records!"
-                break; 
-              } 
-              default: { 
-                 break; 
-              } 
-           } 
-           
-            console.log(workbook.SheetNames);
-            
+    
+          arrayBuffer = fileReader.result;
+          console.log(arrayBuffer);
+          let data = new Uint8Array(arrayBuffer);
+          let arr = new Array();
+    
+          for (let i = 0; i != data.length; ++i) arr[i] = String.fromCharCode(data[i]);
+    
+          let bstr = arr.join("");
+          let workbook = XLSX.read(bstr, { type: "binary" });
+          let worksheet = workbook.Sheets[sheet_name];
+          let Json = XLSX.utils.sheet_to_json(worksheet, { raw: true });
+
+          this.upload_resp_ia="Processed "+Json.length+" records!"
+
+          this.OG_wise_data_ia = {};
+          this.location_wise_data_ia = {};
+
+          this.ia_calculate(Json);
+
+          console.log(this.location_wise_data_ia);
+          console.log(this.OG_wise_data_ia);
+
         }
-        fileReader.readAsArrayBuffer(this.file);
+        fileReader.readAsArrayBuffer(this.IA_file);
+        
+        break;
+      }
+      case "PerformanceSummaryReport": {
+        this.upload_resp_pf = "processing...";
+
+
 
         
+        let arrayBuffer:any="";
 
-  
+        let fileReader = new FileReader();
+        fileReader.onload = (e) => {
+    
+          arrayBuffer = fileReader.result;
+          console.log(arrayBuffer);
+          let data = new Uint8Array(arrayBuffer);
+          let arr = new Array();
+    
+          for (let i = 0; i != data.length; ++i) arr[i] = String.fromCharCode(data[i]);
+    
+          let bstr = arr.join("");
+          let workbook = XLSX.read(bstr, { type: "binary" });
+          let worksheet = workbook.Sheets[sheet_name];
+          let Json = XLSX.utils.sheet_to_json(worksheet, { raw: true });
+
+          this.upload_resp_pf="Processed "+Json.length+" records!"
+
+          this.OG_wise_data_pf = {};
+          this.location_wise_data_pf = {};
+
+          this.pf_calculate(Json);
+
+          console.log(this.location_wise_data_pf);
+          console.log(this.OG_wise_data_pf);
+
+        }
+        fileReader.readAsArrayBuffer(this.PF_file);
 
 
- 
+
+
+        break;
+      }
+      case "RedFlaggedReport": {
+        
+        this.upload_resp_rf = "processing...";
+        let arrayBuffer:any="";
+
+        let fileReader = new FileReader();
+        fileReader.onload = (e) => {
+    
+          arrayBuffer = fileReader.result;
+          console.log(arrayBuffer);
+          let data = new Uint8Array(arrayBuffer);
+          let arr = new Array();
+    
+          for (let i = 0; i != data.length; ++i) arr[i] = String.fromCharCode(data[i]);
+    
+          let bstr = arr.join("");
+          let workbook = XLSX.read(bstr, { type: "binary" });
+          let worksheet = workbook.Sheets[sheet_name];
+          let Json = XLSX.utils.sheet_to_json(worksheet, { raw: true });
+
+          this.upload_resp_rf="Processed "+Json.length+" records!"
+
+          this.OG_wise_data_rf = {};
+          this.location_wise_data_rf = {};
+
+          this.rf_calculate(Json);
+
+          console.log(this.location_wise_data_rf);
+          console.log(this.OG_wise_data_rf);
+
+        }
+        fileReader.readAsArrayBuffer(this.RF_file);
+
+
+        break;
+      }
+      default: {
+        break;
+      }
+    } 
+
+  //   let fileReader = new FileReader();
+  //   fileReader.onload = (e) => {
+
+  //     this.arrayBuffer = fileReader.result;
+  //     var data = new Uint8Array(this.arrayBuffer);
+  //     var arr = new Array();
+
+  //     for (var i = 0; i != data.length; ++i) arr[i] = String.fromCharCode(data[i]);
+
+  //     var bstr = arr.join("");
+  //     var workbook = XLSX.read(bstr, { type: "binary" });
+  //     var worksheet = workbook.Sheets[sheet_name];
+  //     let Json = XLSX.utils.sheet_to_json(worksheet, { raw: true });
       
+  //     switch(sheet_name) { 
+  //       // case "Idea Aging Raw Data": { 
+  //       //   this.upload_resp_ia="Processed "+Json.length+" records!"
+
+  //       //   this.OG_wise_data_ia = {};
+  //       //   this.location_wise_data_ia = {};
+
+  //       //   this.ia_calculate(Json);
+
+  //       //   console.log(this.location_wise_data_ia);
+  //       //   console.log(this.OG_wise_data_ia);
+        
+  //       //   break; 
+  //       // } 
+
+  //       case "PerformanceSummaryReport": { 
+          
+  //         this.upload_resp_pf="Processed "+Json.length+" records!";
+          
+  //           let OG       = Array.from(new Set(Json.map(Json => Json["Master Client Name"])));
+  //           let Location = Array.from(new Set(Json.map(Json => Json["Location"])));
+            
+  //           this.OG_wise_data_pf.data=[];
+  //           OG.forEach((element) => {
+
+  //             let Json_og_wise_filtered = Json.filter(array => array["Master Client Name"]  === element)
+    
+  //             let ideas_submitted_prior_6_months    : number = 0;
+  //             let ideas_implemented_prior_6_months  : number = 0;
+  //             let ideas_implemented_ontime          : number = 0;
+  //             let ideas_implemented                 : number = 0;
+  //             let ideas_validated                   : number = 0;
+  //             let ideas_validated_14_days           : number = 0;
+  //             let ideas_submitted                   : number = 0;
+              
+
+  //             Json_og_wise_filtered.forEach( ( element ) => {
+  //               ideas_submitted_prior_6_months    += +element["No. of Ideas Submitted (Prior 6 Months)"];
+  //               ideas_implemented_prior_6_months  += +element["No. of Ideas Implemented(Prior 6 Months)"]
+  //               ideas_implemented_ontime          += +element["Ideas Implemented Ontime(In)"]
+  //               ideas_implemented                 += +element["Ideas Implemented(In)"]
+  //               ideas_validated_14_days           += +element["No. of Ideas Validated <=14 days"]
+  //               ideas_validated                   += +element["No. of Ideas Validated"]
+  //               ideas_submitted                   += +element["No. of Ideas Submitted"]
+  //             });
+
+  //             let og_obj = {};
+  //             og_obj[element] = {
+  //               ideas_implemented         : this.calculateImplementationRate(ideas_submitted_prior_6_months,  ideas_implemented_prior_6_months),
+  //               ontime_implementation_rate: this.calculateOntimeImplementationRate(ideas_implemented_ontime,ideas_implemented),
+  //               validation_rate           : this.calculateValidationRate(ideas_validated_14_days,ideas_validated),
+  //               ideas_submited_count      : ideas_submitted,
+  //               ipp                       : this.active_deal_headcount
+  //             };
+  //             this.OG_wise_data_pf.data.push(og_obj);
+    
+  //           });
+
+  //           this.location_wise_data_pf.data=[]
+  //           Location.forEach((element) => {
+
+  //             let Json_loc_wise_filtered = Json.filter(array => array["Location"]  === element)
+    
+  //             let ideas_submitted_prior_6_months    : number = 0;
+  //             let ideas_implemented_prior_6_months  : number = 0;
+  //             let ideas_implemented_ontime          : number = 0;
+  //             let ideas_implemented                 : number = 0;
+  //             let ideas_validated                   : number = 0;
+  //             let ideas_validated_14_days           : number = 0;
+  //             let ideas_submitted                   : number = 0;
+            
+
+  //             Json_loc_wise_filtered.forEach( ( element ) => {
+  //               ideas_submitted_prior_6_months    += +element["No. of Ideas Submitted (Prior 6 Months)"];
+  //               ideas_implemented_prior_6_months  += +element["No. of Ideas Implemented(Prior 6 Months)"]
+  //               ideas_implemented_ontime          += +element["Ideas Implemented Ontime(In)"]
+  //               ideas_implemented                 += +element["Ideas Implemented(In)"]
+  //               ideas_validated_14_days           += +element["No. of Ideas Validated <=14 days"]
+  //               ideas_validated                   += +element["No. of Ideas Validated"]
+  //               ideas_submitted                   += +element["No. of Ideas Submitted"]
+  //             });
+
+  //             let loc_obj = {};
+  //             loc_obj[element] = {
+  //               ideas_implemented         : this.calculateImplementationRate(ideas_submitted_prior_6_months,  ideas_implemented_prior_6_months),
+  //               ontime_implementation_rate: this.calculateOntimeImplementationRate(ideas_implemented_ontime,ideas_implemented),
+  //               validation_rate           : this.calculateValidationRate(ideas_validated_14_days,ideas_validated),
+  //               ideas_submited_count      : ideas_submitted,
+  //               ipp                       : this.active_deal_headcount
+  //             };
+              
+  //             this.location_wise_data_pf.data.push(loc_obj);
+            
+  //           });
+  //           console.log(this.OG_wise_data_pf);
+  //           console.log(this.OG_wise_data_pf.data["LIBERTY GLOBAL"]);
+  //           console.log(this.location_wise_data_pf);
+  //           //console.log(this.OG_wise_data_pf);
+  //          // console.log(this.location_wise_data_pf);
+
+  //           break; 
+  //       } 
+
+  //       case "RedFlaggedReport": {
+          
+  //         // this.upload_resp_rf = "Processed " + Json.length + " records!"
+          
+  //         // this.OG_wise_data_rf = {};
+  //         // this.location_wise_data_rf = {};
+
+  //         // this.rf_calculate(Json);
+
+  //         // console.log(this.location_wise_data_rf);
+  //         // console.log(this.OG_wise_data_rf);
+
+  //         break;
+  //       } 
+
+  //       default: { 
+  //           break; 
+  //       } 
+  //     } 
+      
+  //     console.log(workbook.SheetNames);
+        
+  //   }
+  // fileReader.readAsArrayBuffer(this.file);
+     
 }
 
+pf_calculate(Json){
+  let OG       = Array.from(new Set(Json.map(Json => Json["Master Client Name"])));
+  let Location = Array.from(new Set(Json.map(Json => Json["Location"])));
+
+  OG.forEach((element) => {
+
+    let Json_og_wise_filtered = Json.filter(array => array["Master Client Name"]  === element)
+
+    let ideas_submitted_prior_6_months    : number = 0;
+    let ideas_implemented_prior_6_months  : number = 0;
+    let ideas_implemented_ontime          : number = 0;
+    let ideas_implemented                 : number = 0;
+    let ideas_validated                   : number = 0;
+    let ideas_validated_14_days           : number = 0;
+    let ideas_submitted                   : number = 0;
+    
+
+    Json_og_wise_filtered.forEach( ( element ) => {
+      ideas_submitted_prior_6_months    += +element["No. of Ideas Submitted (Prior 6 Months)"];
+      ideas_implemented_prior_6_months  += +element["No. of Ideas Implemented(Prior 6 Months)"]
+      ideas_implemented_ontime          += +element["Ideas Implemented Ontime(In)"]
+      ideas_implemented                 += +element["Ideas Implemented(In)"]
+      ideas_validated_14_days           += +element["No. of Ideas Validated <=14 days"]
+      ideas_validated                   += +element["No. of Ideas Validated"]
+      ideas_submitted                   += +element["No. of Ideas Submitted"]
+    });
+
+
+    let key: any = element;
+
+    this.OG_wise_data_pf[key] = {
+      ideas_implemented: this.calculateImplementationRate(ideas_submitted_prior_6_months, ideas_implemented_prior_6_months),
+      ontime_implementation_rate: this.calculateOntimeImplementationRate(ideas_implemented_ontime, ideas_implemented),
+      validation_rate: this.calculateValidationRate(ideas_validated_14_days, ideas_validated),
+      ideas_submited_count: ideas_submitted,
+      ipp: this.active_deal_headcount,
+      master_client_name:key
+    };
+
+      
+  });
+
+  Location.forEach((element) => {
+
+    let Json_loc_wise_filtered = Json.filter(array => array["Location"]  === element)
+
+    let ideas_submitted_prior_6_months    : number = 0;
+    let ideas_implemented_prior_6_months  : number = 0;
+    let ideas_implemented_ontime          : number = 0;
+    let ideas_implemented                 : number = 0;
+    let ideas_validated                   : number = 0;
+    let ideas_validated_14_days           : number = 0;
+    let ideas_submitted                   : number = 0;
+    
+
+    Json_loc_wise_filtered.forEach( ( element ) => {
+      ideas_submitted_prior_6_months    += +element["No. of Ideas Submitted (Prior 6 Months)"];
+      ideas_implemented_prior_6_months  += +element["No. of Ideas Implemented(Prior 6 Months)"]
+      ideas_implemented_ontime          += +element["Ideas Implemented Ontime(In)"]
+      ideas_implemented                 += +element["Ideas Implemented(In)"]
+      ideas_validated_14_days           += +element["No. of Ideas Validated <=14 days"]
+      ideas_validated                   += +element["No. of Ideas Validated"]
+      ideas_submitted                   += +element["No. of Ideas Submitted"]
+    });
+
+
+    let key: any = element;
+
+    this.location_wise_data_pf[key] = {
+      ideas_implemented: this.calculateImplementationRate(ideas_submitted_prior_6_months, ideas_implemented_prior_6_months),
+      ontime_implementation_rate: this.calculateOntimeImplementationRate(ideas_implemented_ontime, ideas_implemented),
+      validation_rate: this.calculateValidationRate(ideas_validated_14_days, ideas_validated),
+      ideas_submited_count: ideas_submitted,
+      ipp: this.active_deal_headcount
+    };
+
+      
+  });
+}
+
+ia_calculate(Json){
+  console.log("checked");
+  let OG       = Array.from(new Set(Json.map(Json => Json["Master Client Name"])));
+  let Location = Array.from(new Set(Json.map(Json => Json["Location"])));
+
+  OG.forEach((element) => {
+
+    let Json_og_wise_filtered = Json.filter(array => array["Master Client Name"]  === element)
+    
+    let rf_7days : number = 0;
+    let rf_30days: number = 0;
+
+    Json_og_wise_filtered.forEach( ( element ) => {
+
+
+      if((element["Idea Workflow"] == "Assign Implementer") || (element["Idea Workflow"] == "Validate Idea")){
+      
+        let rf_due_days : number = moment(moment(element["Last Actioned On"]).add(90,"days")).diff(moment(), 'days', true);
+        
+        if((rf_due_days >= 0) && (rf_due_days <= 7)){
+          rf_7days+=1;
+        }else if((rf_due_days >= 8) && (rf_due_days <= 30)){
+          rf_30days+=1;
+        }
+
+      }else if((element["Idea Workflow"] == "Implement Idea")){
+        
+        let rf_due_days:number = moment(moment(element["Estimated Implementation Date"]).add(365,"days")).diff(moment().toDate(), 'days', true);
+        
+        if((rf_due_days >= 0) && (rf_due_days <= 7)){
+          rf_7days+=1;
+        }else if((rf_due_days >= 8) && (rf_due_days <= 30)){
+          rf_30days+=1;
+        }
+      }
+
+    });
+
+    let key : any = element;
+    
+    this.OG_wise_data_ia[key] = {
+      ideas_redflagged_7days  : rf_7days,
+      ideas_redflagged_30days : rf_30days
+    };
+
+  });
+
+  Location.forEach((element) => {
+
+    let Json_loc_wise_filtered = Json.filter(array => array["Location"]  === element)
+    
+    let rf_7days : number = 0;
+    let rf_30days: number = 0;
+
+    Json_loc_wise_filtered.forEach( ( element ) => {
+
+
+      if((element["Idea Workflow"] == "Assign Implementer") || (element["Idea Workflow"] == "Validate Idea")){
+      
+        let rf_due_days : number = moment(moment(element["Last Actioned On"]).add(90,"days")).diff(moment(), 'days', true);
+        
+        if((rf_due_days >= 0) && (rf_due_days <= 7)){
+          rf_7days+=1;
+        }else if((rf_due_days >= 8) && (rf_due_days <= 30)){
+          rf_30days+=1;
+        }
+
+      }else if((element["Idea Workflow"] == "Implement Idea")){
+        
+        let rf_due_days:number = moment(moment(element["Estimated Implementation Date"]).add(365,"days")).diff(moment().toDate(), 'days', true);
+        
+        if((rf_due_days >= 0) && (rf_due_days <= 7)){
+          rf_7days+=1;
+        }else if((rf_due_days >= 8) && (rf_due_days <= 30)){
+          rf_30days+=1;
+        }
+      }
+
+    });
+
+    let key : any = element;
+    
+    this.location_wise_data_ia[key] = {
+      ideas_redflagged_7days  : rf_7days,
+      ideas_redflagged_30days : rf_30days
+    };
+
+  });
+}
+
+rf_calculate(Json){
+
+  let OG       = Array.from(new Set(Json.map(Json => Json["Master Client Name"])));
+  let Location = Array.from(new Set(Json.map(Json => Json["Location"])));
+  
+  OG.forEach((element) => {
+
+    let Json_og_wise_filtered = Json.filter(array => array["Master Client Name"]  === element)
+    
+    let key : any = element;
+    
+    this.OG_wise_data_rf[key] = {red_flagged_ideas:Json_og_wise_filtered.length};
+    
+
+  });
+
+  Location.forEach((element) => {
+
+    let Json_loc_wise_filtered = Json.filter(array => array["Location"]  === element)
+
+    let key : any = element;
+    
+    this.location_wise_data_rf[key]=  {red_flagged_ideas:Json_loc_wise_filtered.length};
+  });
+
+}
 
 
   public weekly_data: WeAt[];
@@ -147,13 +572,15 @@ incomingfile(event)
       return isFinite( validation_rate ) ? validation_rate : 0;
     }
 
+   
+
     calculateIA() {
       this.weatService.getIAData()
         .subscribe(ia_data => {
           let ia_raw_data_array = ia_data
           
-          .filter(proj => proj["Master Client Name"]  === this.active_deal_name)
-          .filter(proj => proj["Location"]  === this.active_deal_location)
+         // .filter(proj => proj["Master Client Name"]  === this.active_deal_name)
+         // .filter(proj => proj["Location"]  === this.active_deal_location)
   
           let rf_7days : number = 0;
           let rf_30days: number = 0;
@@ -165,7 +592,6 @@ incomingfile(event)
             
             
             if((element["Idea Workflow"] == "Assign Implementer") || (element["Idea Workflow"] == "Validate Idea")){
-              
               
               let rf_due_days : number = moment(moment(element["Last Actioned On"]).add(90,"days")).diff(moment(), 'days', true);
               
@@ -189,8 +615,8 @@ incomingfile(event)
   
   
           });
-          this.we_at_current.ideas_redflagged_7days       = rf_7days
-          this.we_at_current.ideas_redflagged_30days        = rf_30days
+          //this.we_at_current.ideas_redflagged_7days       = rf_7days
+          //this.we_at_current.ideas_redflagged_30days        = rf_30days
           
         });
   
@@ -200,8 +626,8 @@ incomingfile(event)
       this.weatService.getRFData()
         .subscribe(rf_data => {
           let rf_raw_data_array = rf_data
-          .filter(proj => proj["Master Client Name"]  === this.active_deal_name)
-          .filter(proj => proj["Location"]  === this.active_deal_location)
+         // .filter(proj => proj["Master Client Name"]  === this.active_deal_name)
+         // .filter(proj => proj["Location"]  === this.active_deal_location)
 
           this.we_at_current.red_flagged_ideas = rf_raw_data_array.length
 
@@ -214,8 +640,8 @@ incomingfile(event)
       .subscribe(pf_data => {
         let pf_raw_data_array = pf_data
         //.filter(proj => proj["Location"]            === "Chennai")
-        .filter(proj => proj["Master Client Name"]  === this.active_deal_name)
-          .filter(proj => proj["Location"]  === this.active_deal_location)
+        //.filter(proj => proj["Master Client Name"]  === this.active_deal_name)
+        //  .filter(proj => proj["Location"]  === this.active_deal_location)
 
         
 
@@ -302,7 +728,7 @@ incomingfile(event)
     this.calculateIA();
     //this.saveWeekInfo();
     
-    this.getWeekStack_singleDeal(5);
+    this.getWeekStack_singleDeal(20);
 
     
     

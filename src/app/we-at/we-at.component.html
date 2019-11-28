@@ -3,6 +3,7 @@
 
 <div class="main-content">
     <div class="container-fluid">
+            
         <div class="row">
             <div class="col-lg-12 col-md-12">
                 <div class="card card-stats EmployeesStatsboxBg">
@@ -15,6 +16,72 @@
                         </div>
                     </div>
                     <div class="card-body">
+                            <div class="row">
+                                    <div class="col-lg-4 col-md-6 col-sm-12">
+                                        <div class="card">
+                                            <div class="card-header"
+                                                style="text-align: left; background-color: #e3e3e3;">
+                                                <h4 class="card-title">IA Sheet</h4>
+                                                <p class="card-category">Browser for IdeaAgingReport.xlsx</p>
+                                            </div>
+                                            <div class="card-body" style="text-align: left;">
+                                                <input type="file" style="display: inline-block;"
+                                                    (change)="incomingIAfile($event)" placeholder="Upload file"
+                                                    accept=".xlsx">
+                                                <label>{{upload_resp_ia}}</label>
+                                            </div>
+                                            <div class="card-footer">
+                                                <button type="button" class="btn btn-info" style="width: 100%;"
+                                                    (click)="Upload('Idea Aging Raw Data')">
+                                                    <i class="material-icons">cloud_upload</i> Upload
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-md-6 col-sm-12">
+                                        <div class="card">
+                                            <div class="card-header"
+                                                style="text-align: left; background-color: #e3e3e3;">
+                                                <h4 class="card-title">PF Sheet</h4>
+                                                <p class="card-category">Browser for PerformanceSummaryReport.xlsx
+                                                </p>
+                                            </div>
+                                            <div class="card-body" style="text-align: left;">
+                                                <input type="file" style="display: inline-block;"
+                                                    (change)="incomingPFfile($event)" placeholder="Upload file"
+                                                    accept=".xlsx">
+                                                <label>{{upload_resp_pf}}</label>
+                                            </div>
+                                            <div class="card-footer">
+                                                <button type="button" class="btn btn-info" style="width: 100%;"
+                                                    (click)="Upload('PerformanceSummaryReport')">
+                                                    <i class="material-icons">cloud_upload</i> Upload
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-md-6 col-sm-12">
+                                        <div class="card">
+                                            <div class="card-header"
+                                                style="text-align: left; background-color: #e3e3e3;">
+                                                <h4 class="card-title">RF Sheet</h4>
+                                                <p class="card-category">Browser for RedFlaggedReport.xlsx</p>
+                                            </div>
+                                            <div class="card-body" style="text-align: left;">
+                                                <input type="file" style="display: inline-block;"
+                                                    (change)="incomingRFfile($event)" placeholder="Upload file"
+                                                    accept=".xlsx">
+                                                <label>{{upload_resp_rf}}</label>
+                                            </div>
+                                            <div class="card-footer">
+                                                <button type="button" class="btn btn-info" style="width: 100%;"
+                                                    (click)="Upload('RedFlaggedReport')">
+                                                    <i class="material-icons">cloud_upload</i> Upload
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                         <mat-tab-group>
                             <mat-tab label="OG Wise">
 
@@ -86,17 +153,7 @@
 
                                         <!--Table body -->
                                         <tbody>
-                                            <tr>
-                                                <td scope="row">Accenture Interactive Operations</td>
-                                                <td>1270</td>
-                                                <td>84</td>
-                                                <td class="redFlagged">65</td>
-                                                <td class="redFlagged">0.18</td>
-                                                <td class="greenFlagged">64%</td>
-                                                <td class="greenFlagged">84%</td>
-                                                <td class="greenFlagged">85%</td>
-
-                                            </tr>
+                                            
                                             <tr>
                                                 <td scope="row">Sprint</td>
                                                 <td>1270</td>
@@ -213,72 +270,63 @@
                             </mat-tab>
                             <mat-tab label="Upload Data">
                                 <div class="container-fluid">
-                                    <div class="row">
-                                        <div class="col-lg-4 col-md-6 col-sm-12">
-                                            <div class="card">
-                                                <div class="card-header"
-                                                    style="text-align: left; background-color: #e3e3e3;">
-                                                    <h4 class="card-title">IA Sheet</h4>
-                                                    <p class="card-category">Browser for IdeaAgingReport.xlsx</p>
+
+                                        <div class="row" style="padding: 10px;">
+                                                <div class="col-md-3">
+                                                    <mat-form-field>
+                                                        <mat-select placeholder="Week">
+                                                            <mat-option value="">1</mat-option>
+                                                            <mat-option value="">2</mat-option>
+                                                            <mat-option value="">3</mat-option>
+                                                            <mat-option value="">4</mat-option>
+                                                        </mat-select>
+                                                    </mat-form-field>
                                                 </div>
-                                                <div class="card-body" style="text-align: left;">
-                                                    <input type="file" style="display: inline-block;"
-                                                        (change)="incomingfile($event)" placeholder="Upload file"
-                                                        accept=".xlsx">
-                                                    <label>{{upload_resp_ia}}</label>
+                                                <div class="col-md-3">
+                                                    <mat-form-field>
+                                                        <mat-select placeholder="Month">
+                                                            <mat-option value="">January</mat-option>
+                                                            <mat-option value="">February</mat-option>
+                                                            <mat-option value="">March</mat-option>
+                                                            <mat-option value="">April</mat-option>
+                                                            <mat-option value="">May</mat-option>
+                                                            <mat-option value="">June</mat-option>
+                                                            <mat-option value="">July</mat-option>
+                                                            <mat-option value="">August</mat-option>
+                                                            <mat-option value="">September</mat-option>
+                                                            <mat-option value="">October</mat-option>
+                                                            <mat-option value="">November</mat-option>
+                                                            <mat-option value="">December</mat-option>
+                                                        </mat-select>
+                                                    </mat-form-field>
                                                 </div>
-                                                <div class="card-footer">
-                                                    <button type="button" class="btn btn-info" style="width: 100%;"
-                                                        (click)="Upload('Idea Aging Raw Data')">
-                                                        <i class="material-icons">cloud_upload</i> Upload
+                                                <div class="col-md-3">
+                                                    <mat-form-field>
+                                                        <mat-select placeholder="Year">
+                                                            <mat-option value="">2019</mat-option>
+                                                            <mat-option value="">2018</mat-option>
+                                                            <mat-option value="">2017</mat-option>
+                                                            <mat-option value="">2016</mat-option>
+                                                        </mat-select>
+                                                    </mat-form-field>
+                                                </div>
+        
+        
+        
+        
+        
+                                                <div class="col-md-3">
+                                                    <button class="mat-raised-button mat-button-base mat-primary" mat-button
+                                                        style=" color: #000; background-color:#ffd060;" (click)="Calculate()">
+                                                        <i class="material-icons">save</i> Calculate
+                                                    </button>
+                                                    <button class="mat-raised-button mat-button-base mat-primary" mat-button
+                                                        style=" color: #000; background-color:#ffd060;">
+                                                        <i class="material-icons">save</i> Save
                                                     </button>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class="col-lg-4 col-md-6 col-sm-12">
-                                            <div class="card">
-                                                <div class="card-header"
-                                                    style="text-align: left; background-color: #e3e3e3;">
-                                                    <h4 class="card-title">PF Sheet</h4>
-                                                    <p class="card-category">Browser for PerformanceSummaryReport.xlsx
-                                                    </p>
-                                                </div>
-                                                <div class="card-body" style="text-align: left;">
-                                                    <input type="file" style="display: inline-block;"
-                                                        (change)="incomingfile($event)" placeholder="Upload file"
-                                                        accept=".xlsx">
-                                                    <label>{{upload_resp_pf}}</label>
-                                                </div>
-                                                <div class="card-footer">
-                                                    <button type="button" class="btn btn-info" style="width: 100%;"
-                                                        (click)="Upload('PerformanceSummaryReport')">
-                                                        <i class="material-icons">cloud_upload</i> Upload
-                                                    </button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-4 col-md-6 col-sm-12">
-                                            <div class="card">
-                                                <div class="card-header"
-                                                    style="text-align: left; background-color: #e3e3e3;">
-                                                    <h4 class="card-title">RF Sheet</h4>
-                                                    <p class="card-category">Browser for RedFlaggedReport.xlsx</p>
-                                                </div>
-                                                <div class="card-body" style="text-align: left;">
-                                                    <input type="file" style="display: inline-block;"
-                                                        (change)="incomingfile($event)" placeholder="Upload file"
-                                                        accept=".xlsx">
-                                                    <label>{{upload_resp_rf}}</label>
-                                                </div>
-                                                <div class="card-footer">
-                                                    <button type="button" class="btn btn-info" style="width: 100%;"
-                                                        (click)="Upload('RedFlaggedReport')">
-                                                        <i class="material-icons">cloud_upload</i> Upload
-                                                    </button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    
                                     <div class="row">
                                         <div class="col-md-12">
                                             <div class="table-responsive text-nowrap custopfrom">
@@ -292,7 +340,7 @@
 
                                                         <tr>
                                                             <th>OG</th>
-                                                            <th>HC</th>
+                                                            
                                                             <th>No. of Ideas Submitted</th>
                                                             <th>Red Flagged Ideas</th>
                                                             <th>Idea Per Person<br />(Prorated)<br />Target 1.5</th>
@@ -311,26 +359,31 @@
                                                     <!--Table body -->
                                                     <tbody>
 
-                                                        <tr>
+                                                       
+                                                        <tr *ngFor="let item of OG_wise_data_pf | keyvalue">
 
-
-
-
-
-                                                            <td scope="row">Sprint</td>
-                                                            <td scope="row">20</td>
-                                                            <td>{{we_at_current.ideas_submited_count}}</td>
-                                                            <td>{{we_at_current.red_flagged_ideas}}</td>
-                                                            <td>{{ ((( we_at_current.ideas_submited_count - we_at_current.red_flagged_ideas ) / active_deal_headcount ) / 12 ) }}
-                                                            </td>
-                                                            <td>{{we_at_current.implementation_rate}}</td>
-                                                            <td>{{we_at_current.ontime_implementation_rate }}</td>
-                                                            <td>{{we_at_current.validation_rate}}</td>
-                                                            <td>{{we_at_current.ideas_redflagged_7days}}</td>
-                                                            <td>{{we_at_current.ideas_redflagged_30days}}</td>
-
+                                                                <td style="text-align: left;">{{item.value.master_client_name}}</td>
+                                                                <td style="text-align: left;">{{item.value.ideas_submited_count}}</td>
+                                                                <td style="text-align: left;">{{0}}</td>
+                                                                <td style="text-align: left;">{{0}}</td>
+                                                                <td style="text-align: left;">{{item.value.implementation_rate}}</td>
+                                                                <td style="text-align: left;">{{item.value.ontime_implementation_rate}}</td>
+                                                                <td style="text-align: left;">{{item.value.validation_rate}}</td>
+                                                                <td style="text-align: left;">{{0}}</td>
+                                                                <td style="text-align: left;">{{0}}</td>
+                                                                
+                                                                <!--td>{{og.week}}</td>
+                                                                <td>{{week.data.ideas_submited_count}}</td>
+                                                                <td>{{week.data.red_flagged_ideas}}</td>
+                                                                <td>{{ ((( week.data.ideas_submited_count - week.data.red_flagged_ideas ) / active_deal_headcount ) / 12 ) }}
+                                                                </td>
+                                                                <td>{{week.data.implementation_rate}}</td>
+                                                                <td>{{week.data.ontime_implementation_rate }}</td>
+                                                                <td>{{week.data.validation_rate}}</td>
+                                                                <td>{{week.data.ideas_redflagged_7days}}</td>
+                                                                <td>{{week.data.ideas_redflagged_30days}}</td-->
+                                            
                                                         </tr>
-
 
                                                     </tbody>
 
@@ -342,111 +395,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="row ">
-                                        <div class="col-md-3">
-                                            <mat-form-field>
-                                                <mat-select placeholder="Region">
-                                                    <mat-option value="India">India</mat-option>
-                                                    <mat-option value="">USA</mat-option>
-                                                    <mat-option value="">Canada</mat-option>
-                                                    <mat-option value="">Korea</mat-option>
-                                                    <mat-option value="">Omen</mat-option>
-                                                </mat-select>
-                                            </mat-form-field>
-                                        </div>
-                                        <div class="col-md-3">
-                                            <mat-form-field>
-                                                <mat-select placeholder="Location">
-                                                    <mat-option value="Mumbai">Mumbai</mat-option>
-                                                    <mat-option value="Noida">Noida</mat-option>
-                                                    <mat-option value="Chennai">Chennai</mat-option>
-                                                    <mat-option value="Banglore">Banglore</mat-option>
-                                                </mat-select>
-                                            </mat-form-field>
-                                        </div>
-                                        <div class="col-md-3">
-                                            <mat-form-field>
-                                                <mat-select placeholder="Capability">
-                                                    <mat-option value="Industry Specific">Industry Specific</mat-option>
-                                                    <mat-option value="">Noida</mat-option>
-                                                    <mat-option value="">Chennai</mat-option>
-                                                    <mat-option value="">Banglore</mat-option>
-                                                </mat-select>
-                                            </mat-form-field>
-                                        </div>
-                                        <div class="col-md-3">
-                                            <mat-form-field>
-                                                <mat-select placeholder="Master Client Name">
-                                                    <mat-option value="MICROSOFT CORPORATION">MICROSOFT CORPORATION
-                                                    </mat-option>
-                                                    <mat-option value="Sprint">SPRINT</mat-option>
-                                                    <mat-option value="CIBC">CIBC</mat-option>
-                                                    <mat-option value="BMW">BMW</mat-option>
-                                                </mat-select>
-                                            </mat-form-field>
-                                        </div>
-                                        <div class="col-md-3">
-                                            <mat-form-field>
-                                                <mat-select placeholder="Process">
-                                                    <mat-option value="Publications">Publications</mat-option>
-                                                    <mat-option value="">Noida</mat-option>
-                                                    <mat-option value="">Chennai</mat-option>
-                                                    <mat-option value="">Banglore</mat-option>
-                                                </mat-select>
-                                            </mat-form-field>
-                                        </div>
-                                        <div class="col-md-3">
-                                            <mat-form-field>
-                                                <mat-select placeholder="Weeks">
-                                                    <mat-option value="">1</mat-option>
-                                                    <mat-option value="">2</mat-option>
-                                                    <mat-option value="">3</mat-option>
-                                                    <mat-option value="">4</mat-option>
-                                                </mat-select>
-                                            </mat-form-field>
-
-                                        </div>
-                                        <div class="col-md-3">
-                                            <mat-form-field>
-                                                <mat-select placeholder="Months">
-                                                    <mat-option value="">January</mat-option>
-                                                    <mat-option value="">February</mat-option>
-                                                    <mat-option value="">March</mat-option>
-                                                    <mat-option value=""> April</mat-option>
-                                                    <mat-option value="">May</mat-option>
-                                                    <mat-option value="">June</mat-option>
-                                                    <mat-option value="">July</mat-option>
-                                                    <mat-option value="">August</mat-option>
-                                                    <mat-option value="">September</mat-option>
-                                                    <mat-option value="">October</mat-option>
-                                                    <mat-option value="">November</mat-option>
-                                                    <mat-option value="">December</mat-option>
-                                                </mat-select>
-                                            </mat-form-field>
-                                        </div>
-                                        <div class="col-md-3">
-                                            <mat-form-field>
-                                                <mat-select placeholder="Years">
-                                                    <mat-option value="">2019</mat-option>
-                                                    <mat-option value="">2018</mat-option>
-                                                    <mat-option value="">2017</mat-option>
-                                                    <mat-option value="">2016</mat-option>
-                                                </mat-select>
-                                            </mat-form-field>
-
-                                        </div>
-
-
-
-
-
-                                        <div class="col-md-12">
-                                            <button class="mat-raised-button mat-button-base mat-primary" mat-button
-                                                style=" color: #000; background-color:#ffd060;">
-                                                <i class="material-icons">save</i> Save
-                                            </button>
-                                        </div>
-                                    </div>
+                                    
                                 </div>
                             </mat-tab>
                         </mat-tab-group>
@@ -491,7 +440,7 @@
                                                 <div class="card-body">
 
                                                     <input type="file" style="display: inline-block;"
-                                                        (change)="incomingfile($event)" placeholder="Upload file"
+                                                        (change)="incomingIAfile($event)" placeholder="Upload file"
                                                         accept=".xlsx">
 
 
